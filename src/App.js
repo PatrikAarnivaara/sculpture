@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Sculpture
+          Sculpture is live!
         </a>
       </header>
     </div>
