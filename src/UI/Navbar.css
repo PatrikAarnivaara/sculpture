@@ -14,6 +14,8 @@
     cursor: pointer;
     color: #282c34;
     padding: 0.5em;
+    opacity: 1;
+    transition: all 0.5s ease-out;
     text-decoration: none;
 }
 
@@ -25,29 +27,31 @@
 }
 
 .nav-sculpture-logo:hover {
-	background: rgba(230, 230, 230, 0.2);
+    opacity: 0.5;
+    visibility: visible;
+	/* background: rgba(230, 230, 230, 0.2); */
 }
 
 .nav-collection-logo {
 	cursor: pointer;
     color: #282c34;
     padding: 0.5em;
+    opacity: 1;
+    transition: all 0.5s ease-out;
     text-decoration: none;
 	/* border: 2px solid grey; */
 }
 
 .nav-collection-logo-active {
     cursor: pointer;
-    color: #282c34;
-    padding: 0.5em;
-    text-decoration: underline;
+    
+    /* color: #282c34; */
+    /* text-decoration: underline; */
     /* border: 2px solid black; */
 }
 
 .nav-collection-logo:hover {
-	background: rgba(230, 230, 230, 0.2);
-}
-
-.nav-collection-logo:visited {
-    text-decoration: underline;
+    opacity: 0.5;
+    visibility: visible;
+	/* background: rgba(230, 230, 230, 0.2); */
 }
