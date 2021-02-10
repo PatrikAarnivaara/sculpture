@@ -1,0 +1,57 @@
+.nav-wrapper {
+	height: 80px;
+	width: 100%;
+	background: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	font-size: 1.2rem;
+    
+}
+
+.nav-sculpture-logo {
+    cursor: pointer;
+    color: #282c34;
+    padding: 0.5em;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+}
+
+.nav-sculpture-logo-active {
+	cursor: pointer;
+	padding: 0.5em;
+    color:#282c34;
+    text-decoration: underline;
+}
+
+.nav-sculpture-logo:hover {
+    opacity: 0.5;
+    visibility: visible;
+	/* background: rgba(230, 230, 230, 0.2); */
+}
+
+.nav-collection-logo {
+	cursor: pointer;
+    color: #282c34;
+    padding: 0.5em;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+	/* border: 2px solid grey; */
+}
+
+.nav-collection-logo-active {
+    cursor: pointer;
+    
+    /* color: #282c34; */
+    /* text-decoration: underline; */
+    /* border: 2px solid black; */
+}
+
+.nav-collection-logo:hover {
+    opacity: 0.5;
+    visibility: visible;
+	/* background: rgba(230, 230, 230, 0.2); */
+}
