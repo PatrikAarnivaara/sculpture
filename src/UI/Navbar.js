@@ -7,7 +7,7 @@ const NavBar = () => {
 	return (
 		<nav className="nav-wrapper">
 			<NavLink activeClassName="nav-sculpture-logo-active" exact to="/" className="nav-sculpture-logo">
-				<h2>sculpture</h2>
+				<p>sculpture</p>
 			</NavLink>
 			<NavLink
 				activeClassName="nav-collection-logo-active"
@@ -15,7 +15,7 @@ const NavBar = () => {
 				to="/collection"
 				className="nav-collection-logo"
 			>
-				<img src={sculptureIcon} alt="sculpture icon" style={{ width: 'auto', height: 50 }} />
+				<img src={sculptureIcon} alt="sculpture icon" style={{ width: 'auto', maxHeight: 50 }} />
 			</NavLink>
 		</nav>
 	);
