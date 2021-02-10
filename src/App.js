@@ -1,7 +1,10 @@
+import './App.css'
+import Sculpture from './components/sculpture/Sculpture';
+
 function App() {
 	return (
-		<div>
-			<h1>ScUlPtUrE</h1>
+		<div className="app">
+			<Sculpture />
 		</div>
 	);
 }
