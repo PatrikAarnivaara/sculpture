@@ -7,7 +7,7 @@ const NavBar = () => {
 	return (
 		<nav className="nav-wrapper">
 			<NavLink activeClassName="nav-sculpture-logo-active" exact to="/" className="nav-sculpture-logo">
-				<p>sculpture</p>
+				<h2>sculpture</h2>
 			</NavLink>
 			<NavLink
 				activeClassName="nav-collection-logo-active"
