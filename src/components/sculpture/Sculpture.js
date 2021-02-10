@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sculpture.css';
 
 const Sculpture = () => {
 	return (
-		<header className="Sculpture-header">
-			<h1>Sculpture</h1>
+		<header className="Sculpture-wrapper">
+			<Link to="/collection">Sculpture</Link>
 		</header>
 	);
 };

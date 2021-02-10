@@ -1,0 +1,30 @@
+.Nav-wrapper {
+	height: 80px;
+	width: 100%;
+	background: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	font-size: 1.2rem;
+}
+
+
+
+.Nav-sculpture-logo {
+	text-decoration: none;
+    
+}
+
+
+.Nav-sculpture-logo:hover {
+    color: grey
+}
+
+.Nav-collection-logo {
+	text-decoration: none;
+}
+
+.Nav-collection-logo:hover {
+    color: aqua;
+}
