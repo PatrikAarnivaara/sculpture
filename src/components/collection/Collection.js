@@ -1,9 +1,10 @@
 import React from 'react';
+import './Collection.css'
 
 const Collection = () => {
     return (
-        <div>
-            <p>Collection of sculptures</p>
+        <div className="collection-wrapper">
+            <h3>Collection of sculptures</h3>
         </div>
     );
 };
