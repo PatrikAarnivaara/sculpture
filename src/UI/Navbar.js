@@ -9,7 +9,7 @@ const NavBar = () => {
 				<h2>sculpture</h2>
 			</Link>
 			<Link to="/collection" className="Nav-collection-logo">
-				<h2>c.</h2>
+				<h2>c...</h2>
 			</Link>
 		</nav>
 	);

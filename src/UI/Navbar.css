@@ -11,19 +11,20 @@
 
 .Nav-sculpture-logo {
 	text-decoration: none;
-    cursor: pointer;
-    
+	cursor: pointer;
+	padding: 0.5em;
 }
 
 .Nav-sculpture-logo:hover {
-    color: grey
+	color: grey;
 }
 
 .Nav-collection-logo {
 	text-decoration: none;
-    cursor: pointer;
+	cursor: pointer;
+    padding: 0.5em;
 }
 
 .Nav-collection-logo:hover {
-    color: aqua;
+	color: aqua;
 }

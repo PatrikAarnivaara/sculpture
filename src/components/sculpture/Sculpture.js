@@ -4,7 +4,7 @@ import './Sculpture.css';
 const Sculpture = () => {
 	return (
 		<header className="sculpture-wrapper">
-			<h3>Search sculptures</h3>
+			<h3>Search and find</h3>
 		</header>
 	);
 };
