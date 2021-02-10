@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import getGoogle from '../../api/getGoogle';
 import './Sculpture.css';
 
+/* useMemo???? */
 const Sculpture = () => {
 	const [sculptureList, setSculptureList] = useState('');
 
