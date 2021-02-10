@@ -1,13 +1,7 @@
-import './App.css';
-
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-					Sculpture is live, it really is!
-				</a>
-			</header>
+		<div>
+			<h1>ScUlPtUrE</h1>
 		</div>
 	);
 }
