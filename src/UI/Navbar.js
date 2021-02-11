@@ -15,7 +15,7 @@ const NavBar = () => {
 				to="/collection"
 				className="nav-collection-logo"
 			>
-				<img src={sculptureIcon} alt="sculpture icon" style={{ width: 'auto', maxHeight: 50 }} />
+				<img src={sculptureIcon} alt="sculpture icon" style={{ width: 'auto', maxHeight: 60 }} />
 			</NavLink>
 		</nav>
 	);
