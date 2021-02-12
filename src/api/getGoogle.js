@@ -6,7 +6,7 @@ const getGoogle = async () => {
 			`https://us-central1-sculpture-304310.cloudfunctions.net/sculptures-from-artsy`
 		);
 		if (response.status === 200) {
-			return response
+			return response.data.results
 		}
 	} catch (ex) {
 		return { success: false, error: ex.message };
