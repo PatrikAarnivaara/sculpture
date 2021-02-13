@@ -1,29 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import getGoogle from '../../api/getGoogle';
 import './Sculpture.css';
+import SculptureListItem from './SculptureListItem';
 
-/* useMemo???? */
+const LOCAL_STORAGE_KEY = 'images';
+
+const saveToLocalStorage = (articles) => {
+	localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(articles));
+};
+
+const readFromLocalStorage = () => {
+	const storedArticles = localStorage.getItem(LOCAL_STORAGE_KEY);
+	return storedArticles ? JSON.parse(storedArticles) : [];
+};
+
 const Sculpture = () => {
-	const [sculptureList, setSculptureList] = useState('');
+	const [sculptureList, setSculptureList] = useState([]);
 
 	useEffect(() => {
 		const getTestData = async () => {
 			try {
 				const response = await getGoogle();
-				console.log(response.data);
-				setSculptureList(response.data);
+				setSculptureList(response);
+				/* localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(response)); */
 			} catch (error) {
 				console.log(error);
 			}
 		};
 		getTestData();
-	}, [setSculptureList]);
+	}, []);
 
 	return (
-		<header className="sculpture-wrapper">
-			<h3>Search and find</h3>
-			<h4>{sculptureList}</h4>
-		</header>
+		/* Spinner and timer */
+		<div className="container">
+			{sculptureList
+				? sculptureList.map((sculpture, index) => (
+						<SculptureListItem
+							key={index}
+							image={sculpture.urls.small}
+							date={sculpture.created_at}
+							description={sculpture.alt_description}
+						/>
+				  ))
+				: []}
+		</div>
 	);
 };
 
