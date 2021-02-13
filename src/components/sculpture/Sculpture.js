@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import getGoogle from '../../api/getGoogle';
-import unsplash from '../../api/unsplash';
 import './Sculpture.css';
+import SculptureListItem from './SculptureListItem';
 
-const LOCAL_STORAGE_KEY = 'articles';
+const LOCAL_STORAGE_KEY = 'images';
 
 const saveToLocalStorage = (articles) => {
 	localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(articles));
@@ -14,19 +14,15 @@ const readFromLocalStorage = () => {
 	return storedArticles ? JSON.parse(storedArticles) : [];
 };
 
-/* useMemo???? */
 const Sculpture = () => {
-	const [sculptureList, setSculptureList] = useState(readFromLocalStorage());
+	const [sculptureList, setSculptureList] = useState([]);
 
 	useEffect(() => {
 		const getTestData = async () => {
 			try {
-				/* const response = await unsplash.get("/search/photos", {
-					params: { query: 'sculpture' }
-				  }) */
 				const response = await getGoogle();
-				localStorage.setItem('articles', JSON.stringify(response));
-				console.log(response);
+				setSculptureList(response);
+				/* localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(response)); */
 			} catch (error) {
 				console.log(error);
 			}
@@ -35,12 +31,19 @@ const Sculpture = () => {
 	}, []);
 
 	return (
-		<header className="sculpture-wrapper">
-			<h3>Search and find</h3>
-			{sculptureList.map((sculpture, index) => (
-				<img key={index} src={sculpture.urls.small} alt={sculpture.alt_description} />
-			))}
-		</header>
+		/* Spinner and timer */
+		<div className="container">
+			{sculptureList
+				? sculptureList.map((sculpture, index) => (
+						<SculptureListItem
+							key={index}
+							image={sculpture.urls.small}
+							date={sculpture.created_at}
+							description={sculpture.alt_description}
+						/>
+				  ))
+				: []}
+		</div>
 	);
 };
 
