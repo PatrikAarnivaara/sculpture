@@ -10,9 +10,19 @@
 	color: #282c34;
 }
 
-.container > div {
+.container div {
 	background-color: #f1f1f1;
 	margin: 1em;
 	padding: 1em;
 	font-size: 1rem;
+}
+
+.container p,
+span {
+	font-size: 1rem;
+}
+
+.container img {
+	width: 'auto';
+	max-height: 300px;
 }

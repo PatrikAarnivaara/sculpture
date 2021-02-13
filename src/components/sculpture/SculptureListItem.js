@@ -1,11 +1,14 @@
 import React from 'react';
+// ADD proptypes
 
 const SculptureListItem = ({ image, date, description }) => {
+	const formatDate = new Date(date);
+
 	return (
 		<div>
-			<img src={image} alt={description} style={{ width: 'auto', maxHeight: 300 }} />
-			<p>{date}</p>
-			{description ? <span>{description}</span> : 'no description available'}
+			<img src={image} alt={description} className="imago" />
+			<p>Year: {formatDate.getFullYear()}</p>
+			{description ? <span>Description: {description}</span> : 'no description available'}
 		</div>
 	);
 };
