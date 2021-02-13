@@ -3,16 +3,16 @@ import getGoogle from '../../api/getGoogle';
 import './Sculpture.css';
 import SculptureListItem from './SculptureListItem';
 
-const LOCAL_STORAGE_KEY = 'images';
+/* const LOCAL_STORAGE_KEY = 'images'; */
 
-const saveToLocalStorage = (articles) => {
+/* const saveToLocalStorage = (articles) => {
 	localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(articles));
 };
 
 const readFromLocalStorage = () => {
 	const storedArticles = localStorage.getItem(LOCAL_STORAGE_KEY);
 	return storedArticles ? JSON.parse(storedArticles) : [];
-};
+}; */
 
 const Sculpture = () => {
 	const [sculptureList, setSculptureList] = useState([]);
