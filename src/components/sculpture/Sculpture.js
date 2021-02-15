@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getGoogle from '../../api/getGoogle';
-import './Sculpture.css';
 import SculptureListItem from './SculptureListItem';
+import './Sculpture.css';
 
 /* const LOCAL_STORAGE_KEY = 'images'; */
 
