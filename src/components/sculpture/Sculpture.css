@@ -10,11 +10,17 @@
 	color: #282c34;
 }
 
-.container div {
-	background-color: #f1f1f1;
+.unselected,
+.selected {
+	background-color: #f9f7f5;
 	margin: 1em;
 	padding: 1em;
 	font-size: 1rem;
+	cursor: pointer;
+}
+
+.selected {
+	background-color: #DEA6A6;
 }
 
 .container p,
@@ -23,6 +29,6 @@ span {
 }
 
 .container img {
-	width: 'auto';
-	max-height: 300px;
+	max-width: 300px;
+	height: auto;
 }
