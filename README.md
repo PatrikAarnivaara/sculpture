@@ -1,6 +1,6 @@
 # Sculpture
 
-A small application for searching, sorting and filtering images of sculptures which can be selected and stored in Local Storage. It also explores deployment to Google Cloud Run setting up a CI/CD pipeline. Making requests to a Google Cloud serverless function that fetches data from an Artsy's API. The frontend is built with React Hooks and the Context API.   
+A small application for searching, sorting and filtering images of sculptures which can be selected and stored in Local Storage. It also explores deployment to Google Cloud Run setting up a CI/CD pipeline. Making requests to a Google Cloud serverless function that fetches data from an Artsy's API. The frontend is built with React Hooks and the Context API. URL to finished project: https://sculpture-304310-uzyaeprlzq-lz.a.run.app/  
 
 ## Screenshots
 <img src="" width="auto" height="400">
@@ -28,7 +28,7 @@ Set up a Google Cloud function endpoint with the Artsy API:
 https://console.cloud.google.com/functions/
 
 1. Clone repo and run in optional IDE
-2. cd into folder invoice
+2. cd into folder sculpture
 3. yarn install - wait until all dependencies are installed
 4. yarn start
 5. Application opens at localhost:3000
