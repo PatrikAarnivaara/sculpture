@@ -5,13 +5,13 @@ import SculptureList from './SculptureList';
 import './Sculpture.css';
 
 const Sculpture = () => {
-	const [sculptureList, setSculptureList] = useState([]);
+	const [sculptureListArtsy, setSculptureListArtsy] = useState([]);
 
 	useEffect(() => {
 		const getTestData = async () => {
 			try {
 				const response = await getSculptures();
-				setSculptureList(response);
+				setSculptureListArtsy(response);
 			} catch (error) {
 				console.log(error);
 			}
@@ -23,7 +23,7 @@ const Sculpture = () => {
 		/* Spinner and timer */
 		<div>
 			<Searchbar />
-			<SculptureList sculptureList={sculptureList}></SculptureList>
+			<SculptureList sculptureListArtsy={sculptureListArtsy}></SculptureList>
 		</div>
 	);
 };

@@ -5,20 +5,22 @@ import './Sculpture.css';
 
 const SculptureListItem = ({ id, url, description }) => {
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
-	const [clickHandler, setClickHandler] = useState(false);
+	const [clickHandler, setClickHandler] = useState(true);
 
 	const handleClick = () => {
-		if (!clickHandler) {
-			setClickHandler(true);
+		console.log(clickHandler)
+		
+		if (clickHandler) {
+			setClickHandler(false);
 			addSculpture(id, url, description);
 		} else {
-			setClickHandler(false);
+			setClickHandler(true);
 			removeSculpture(id);
 		}
 	};
 
 	return (
-		<div onClick={handleClick} className={clickHandler ? 'selected' : 'unselected'}>
+		<div onClick={handleClick} className={clickHandler ? 'unselected' : 'selected'}>
 			<img src={url} alt={description} />
 		</div>
 	);
