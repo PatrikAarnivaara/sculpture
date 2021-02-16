@@ -24,7 +24,7 @@ https://medium.com/swlh/deploying-a-react-app-to-google-cloud-run-with-github-ac
 When the pipeline is up and running sign up to Artsy's developer account and follow there guidelines for using their API: 
 https://developers.artsy.net/v2/start
 
-Set up a Google Cloud function endpoint with the Artsy API. 
+Set up a Google Cloud function endpoint with the Artsy API:
 https://console.cloud.google.com/functions/
 
 1. Clone repo and run in optional IDE
