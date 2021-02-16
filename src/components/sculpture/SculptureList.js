@@ -12,8 +12,6 @@ const SculptureList = (props) => {
 							url={sculpture.urls.small}
 							date={sculpture.created_at}
 							description={sculpture.alt_description}
-							selectedSculptures={props.selectedSculptures}
-							setSelectedSculptures={props.setSelectedSculptures}
 						/>
 				  ))
 				: []}

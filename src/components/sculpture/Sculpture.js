@@ -6,7 +6,6 @@ import './Sculpture.css';
 
 const Sculpture = () => {
 	const [sculptureList, setSculptureList] = useState([]);
-	const [selectedSculptures, setSelectedSculptures] = useState([]);
 
 	useEffect(() => {
 		const getTestData = async () => {
@@ -24,11 +23,7 @@ const Sculpture = () => {
 		/* Spinner and timer */
 		<div>
 			<Searchbar />
-			<SculptureList
-				sculptureList={sculptureList}
-				selectedSculptures={selectedSculptures}
-				setSelectedSculptures={setSelectedSculptures}
-			></SculptureList>
+			<SculptureList sculptureList={sculptureList}></SculptureList>
 		</div>
 	);
 };

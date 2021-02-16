@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { useContext, useState } from 'react';
+import { SculptureContext } from '../../context/SculptureContext';
 import './Sculpture.css';
 // ADD proptypes
 
-
-
-const SculptureListItem = ({ url, description, setSelectedSculptures, selectedSculptures }) => {
+const SculptureListItem = ({ id, url, description }) => {
+	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clickHandler, setClickHandler] = useState(false);
-
-	console.log(selectedSculptures)
 
 	const handleClick = () => {
 		if (!clickHandler) {
 			setClickHandler(true);
-			setSelectedSculptures([...selectedSculptures, { url, description, id: uuidv4() }]);
+			addSculpture(id, url, description);
 		} else {
 			setClickHandler(false);
-			setSelectedSculptures(selectedSculptures.filter(sculpture => sculpture.id !== selectedSculptures.id))
+			removeSculpture(id);
 		}
 	};
 
