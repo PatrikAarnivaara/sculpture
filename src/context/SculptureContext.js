@@ -4,10 +4,14 @@ export const SculptureContext = createContext();
 
 const SculptureContextProvider = (props) => {
 	const [sculptures, setSculptures] = useState([]);
-	console.log(sculptures)
+	console.log(sculptures);
 
 	const addSculpture = (id, url, description) => {
-		setSculptures([...sculptures, { id, url, description }]);
+		if (sculptures.some((sculpture) => sculpture.id === id)) {
+			return;
+		} else {
+			setSculptures([...sculptures, { id, url, description }]);
+		}
 	};
 
 	const removeSculpture = (id) => {
