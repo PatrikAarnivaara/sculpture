@@ -1,11 +1,11 @@
 import React from 'react';
 import SculptureListItem from './SculptureListItem';
 
-const SculptureList = (props) => {
+const SculptureList = ({ sculptureList }) => {
 	return (
 		<div className="container">
-			{props.sculptureList
-				? props.sculptureList.map((sculpture, index) => (
+			{sculptureList
+				? sculptureList.map((sculpture, index) => (
 						<SculptureListItem
 							key={index}
 							id={sculpture.id}
