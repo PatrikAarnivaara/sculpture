@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Sculpture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small application for searching, sorting and filtering images of sculptures which can be selected and stored in Local Storage. It also explores deployment to Google Cloud Run setting up a CI/CD pipeline. Making requests to a Google Cloud serverless function that fetches data from an Artsy's API. The frontend is built with React Hooks and the Context API.   
 
-## Available Scripts
+## Screenshots
+<img src="" width="auto" height="400">
 
-In the project directory, you can run:
+## Technologies
+* React
+* Google Cloud Run
 
-### `yarn start`
+## Features
+* Search images of sculptures
+* Sort and filter fetched images
+* Add images to a collection stored in your browsers Local Storage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API
+* All requests are sent to a Google Cloud Function with an Artsy API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup
+Before you can run the application you have to set up a CI/CD pipeline, I suggest following this tutorial: 
+https://medium.com/swlh/deploying-a-react-app-to-google-cloud-run-with-github-actions-ae24ac6cb85a
 
-### `yarn test`
+When the pipeline is up and running sign up to Artsy's developer account and follow there guidelines for using their API: 
+https://developers.artsy.net/v2/start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Set up a Google Cloud function endpoint with the Artsy API. 
+https://console.cloud.google.com/functions/
 
-### `yarn build`
+1. Clone repo and run in optional IDE
+2. cd into folder invoice
+3. yarn install - wait until all dependencies are installed
+4. yarn start
+5. Application opens at localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Status
+Project is: _ongoing_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Created by Patrik Aarnivaara
