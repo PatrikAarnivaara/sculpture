@@ -8,15 +8,16 @@ const Sculpture = () => {
 	const [sculptureListArtsy, setSculptureListArtsy] = useState([]);
 
 	useEffect(() => {
-		const getTestData = async () => {
+		const getListOfSculptures = async () => {
 			try {
 				const response = await getSculptures();
 				setSculptureListArtsy(response);
+				console.log(response);
 			} catch (error) {
 				console.log(error);
 			}
 		};
-		getTestData();
+		getListOfSculptures();
 	}, []);
 
 	return (

@@ -2,6 +2,7 @@ import React from 'react';
 import SculptureListItem from './SculptureListItem';
 
 const SculptureList = ({ sculptureListArtsy }) => {
+
 	return (
 		<div className="container">
 			{sculptureListArtsy ? (
