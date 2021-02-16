@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const getGoogle = async () => {
+const getSculptures = async () => {
 	try {
 		const response = await axios.get(
 			`https://us-central1-sculpture-304310.cloudfunctions.net/sculptures-from-artsy`
@@ -14,4 +14,4 @@ const getGoogle = async () => {
 	}
 };
 
-export default getGoogle;
+export default getSculptures;

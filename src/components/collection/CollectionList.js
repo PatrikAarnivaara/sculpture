@@ -16,7 +16,7 @@ const CollectionList = () => {
 	const { sculptures } = useContext(SculptureContext);
 
 	return (
-		<div>
+		<div className="collection-wrapper">
 			{sculptures.map((sculpture, index) => (
 				<CollectionListItem
 					key={index}

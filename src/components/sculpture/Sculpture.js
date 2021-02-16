@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import getGoogle from '../../api/getGoogle';
+import getSculptures from '../../api/getSculptures';
 import Searchbar from '../../UI/Searchbar/Searchbar';
 import SculptureList from './SculptureList';
 import './Sculpture.css';
@@ -10,7 +10,7 @@ const Sculpture = () => {
 	useEffect(() => {
 		const getTestData = async () => {
 			try {
-				const response = await getGoogle();
+				const response = await getSculptures();
 				setSculptureList(response);
 			} catch (error) {
 				console.log(error);

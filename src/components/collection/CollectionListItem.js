@@ -2,7 +2,7 @@ import React from 'react';
 
 const CollectionListItem = ({ url, description }) => {
 	return (
-		<div>
+		<div className="collection-item">
 			<img src={url} alt={description} />
 		</div>
 	);
