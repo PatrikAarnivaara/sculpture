@@ -1,9 +1,11 @@
 import axios from 'axios';
 
-const getSculptures = async () => {
+const getSculptures = async (query) => {
+	console.log(query)
+
 	try {
 		const response = await axios.get(
-			`https://us-central1-sculpture-304310.cloudfunctions.net/sculptures-from-artsy`
+			'https://us-central1-sculpture-304310.cloudfunctions.net/sculptures-from-artsy',
 		);
 		if (response.status === 200) {
 			return response.data.results;

@@ -1,23 +1,28 @@
-import React, { createContext, useState, useEffect } from 'react';
-import getSculptures from '../api/getSculptures';
+import React, { createContext, useState } from 'react';
+/* import getSculptures from '../api/getSculptures'; */
+import unsplash from '../api/unsplash';
 export const SculptureContext = createContext();
 
 const SculptureContextProvider = (props) => {
 	const [sculptures, setSculptures] = useState([]);
 	const [sculptureListArtsy, setSculptureListArtsy] = useState([]);
 
-	useEffect(() => {
-		const getListOfSculptures = async () => {
-			try {
-				const response = await getSculptures();
-				setSculptureListArtsy(response);
-				console.log(response);
-			} catch (error) {
-				console.log(error);
-			}
-		};
-		getListOfSculptures();
-	}, []);
+	/* useEffect(() => { */
+	const getListOfSculptures = async (query) => {
+		console.log(query);
+		try {
+			/* const response = await getSculptures(query); */
+			const response = await unsplash.get('/search/photos', {
+				params: { query: query },
+			});
+			setSculptureListArtsy(response.data.results);
+			console.log(response);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+	/* 	getListOfSculptures();
+	}, []); */
 
 	const addSculpture = (id, url, description) => {
 		if (sculptures.some((sculpture) => sculpture.id === id)) {
@@ -32,7 +37,9 @@ const SculptureContextProvider = (props) => {
 	};
 
 	return (
-		<SculptureContext.Provider value={{ sculptures, sculptureListArtsy, addSculpture, removeSculpture }}>
+		<SculptureContext.Provider
+			value={{ sculptures, sculptureListArtsy, getListOfSculptures, addSculpture, removeSculpture }}
+		>
 			{props.children}
 		</SculptureContext.Provider>
 	);

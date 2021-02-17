@@ -6,7 +6,7 @@ const SculptureList = () => {
 	const { sculptureListArtsy } = useContext(SculptureContext);
 	return (
 		<div className="container">
-			{sculptureListArtsy ? (
+			{sculptureListArtsy.length ? (
 				sculptureListArtsy.map((sculpture) => (
 					<SculptureListItem
 						key={sculpture.id}
@@ -17,7 +17,7 @@ const SculptureList = () => {
 					/>
 				))
 			) : (
-				<div>Waiting to fetch images.{/* Spinner here */}</div>
+				<div>Waiting to fetch images.{/* Spinner + timer */}</div>
 			)}
 		</div>
 	);
