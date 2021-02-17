@@ -6,13 +6,32 @@
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-	background-color: #f9f7f5;
 	color: #282c34;
 }
 
-.container > div {
-	background-color: #f1f1f1;
+.unselected,
+.selected {
+	background-color: #ffffff;
 	margin: 1em;
 	padding: 1em;
 	font-size: 1rem;
+	cursor: pointer;
+}
+
+.selected {
+	background-color: #dea6a6;
+}
+
+.container p,
+span {
+	font-size: 1rem;
+}
+
+.container img {
+	max-width: 300px;
+	height: auto;
+}
+
+.container img:hover {
+	opacity: 0.8;
 }

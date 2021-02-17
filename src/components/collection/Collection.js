@@ -1,12 +1,9 @@
 import React from 'react';
-import './Collection.css'
+import CollectionList from './CollectionList';
+import './Collection.css';
 
 const Collection = () => {
-    return (
-        <div className="collection-wrapper">
-            <h3>Collection</h3>
-        </div>
-    );
+	return <CollectionList />;
 };
 
 export default Collection;

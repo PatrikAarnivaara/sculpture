@@ -1,10 +1,23 @@
 .collection-wrapper {
 	min-height: 100vh;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-	background-color: #f9f7f5;
 	color: #282c34;
+}
+
+.collection-wrapper img {
+	max-width: 300px;
+	height: auto;
+}
+
+.collection-item {
+	background-color: #ffffff;
+	margin: 1em;
+	padding: 1em;
+	font-size: 1rem;
+	cursor: pointer;
 }

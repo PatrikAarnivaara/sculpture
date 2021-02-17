@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import sculptureIcon from '../assets/sculpture.png';
+import sculptureIcon from '../../assets/sculpture.png';
 
 const NavBar = () => {
 	return (

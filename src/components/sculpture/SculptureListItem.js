@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { SculptureContext } from '../../context/SculptureContext';
+import './Sculpture.css';
+// ADD proptypes
 
-const SculptureListItem = ({ image, date, description }) => {
+const SculptureListItem = ({ id, url, description }) => {
+	const { addSculpture, removeSculpture } = useContext(SculptureContext);
+	const [clicked, setClicked] = useState(false);
+
+	const handleClick = () => {
+		if (!clicked) {
+			setClicked(true);
+			addSculpture(id, url, description);
+		} else {
+			setClicked(false);
+			removeSculpture(id);
+		}
+	};
+
 	return (
-		<div>
-			<img src={image} alt={description} style={{ width: 'auto', maxHeight: 300 }} />
-			<p>{date}</p>
-			{description ? <span>{description}</span> : 'no description available'}
+		<div onClick={handleClick} className={clicked ? 'selected' : 'unselected'}>
+			<img src={url} alt={description} />
 		</div>
 	);
 };
