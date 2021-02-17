@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SculptureListItem from './SculptureListItem';
+import { SculptureContext } from '../../context/SculptureContext';
 
-const SculptureList = ({ sculptureListArtsy }) => {
-
+const SculptureList = () => {
+	const { sculptureListArtsy } = useContext(SculptureContext);
 	return (
 		<div className="container">
 			{sculptureListArtsy ? (

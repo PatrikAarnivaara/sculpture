@@ -4,7 +4,6 @@ import CollectionListItem from './CollectionListItem';
 
 const CollectionList = () => {
 	const { sculptures } = useContext(SculptureContext);
-
 	return (
 		<div className="collection-wrapper">
 			{sculptures.length ? (
