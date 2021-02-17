@@ -3,7 +3,7 @@ import { SculptureContext } from '../../context/SculptureContext';
 import './Searchbar.css';
 
 const Searchbar = () => {
-	const [query, setQuery] = useState("");
+	const [query, setQuery] = useState('');
 	const { getListOfSculptures } = useContext(SculptureContext);
 
 	const searchSculptures = (e) => {
@@ -12,7 +12,7 @@ const Searchbar = () => {
 		console.log('Submit');
 	};
 
-	console.log(query)
+	console.log(query);
 
 	return (
 		<div className="container-searchbar">
@@ -24,8 +24,7 @@ const Searchbar = () => {
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 				/>
-
-				<button type="submit">Search</button>
+				<input type="submit" style={{ display: 'none' }} />
 			</form>
 		</div>
 	);

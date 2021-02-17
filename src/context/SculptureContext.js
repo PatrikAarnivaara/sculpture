@@ -9,14 +9,12 @@ const SculptureContextProvider = (props) => {
 
 	/* useEffect(() => { */
 	const getListOfSculptures = async (query) => {
-		console.log(query);
 		try {
 			/* const response = await getSculptures(query); */
 			const response = await unsplash.get('/search/photos', {
-				params: { query: query },
+				params: { query },
 			});
 			setSculptureListArtsy(response.data.results);
-			console.log(response);
 		} catch (error) {
 			console.log(error);
 		}
