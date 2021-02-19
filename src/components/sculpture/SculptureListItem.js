@@ -3,7 +3,7 @@ import { SculptureContext } from '../../context/SculptureContext';
 import './Sculpture.css';
 // ADD proptypes
 
-const SculptureListItem = ({ id, url, description }) => {
+const SculptureListItem = ({ id, url, date, description, category }) => {
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
 
@@ -20,6 +20,9 @@ const SculptureListItem = ({ id, url, description }) => {
 	return (
 		<div onClick={handleClick} className={clicked ? 'selected' : 'unselected'}>
 			<img src={url} alt={description} />
+			<p>{description}</p>
+			<p>{date}</p>
+			<p>{category}</p>
 		</div>
 	);
 };

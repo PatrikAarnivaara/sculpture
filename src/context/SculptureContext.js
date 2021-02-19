@@ -1,7 +1,7 @@
 import { queryAllByDisplayValue } from '@testing-library/react';
 import React, { createContext, useState } from 'react';
 /* import getSculptures from '../api/getSculptures'; */
-import unsplash from '../api/unsplash';
+import artInstituteChicago from '../api/artInstituteChicago';
 export const SculptureContext = createContext();
 
 const SculptureContextProvider = (props) => {
@@ -12,8 +12,8 @@ const SculptureContextProvider = (props) => {
 	const getListOfSculptures = async (query) => {
 		try {
 			/* const response = await getSculptures(query); */
-			const response = await unsplash.get(
-				`artworks/search?size=20&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles`
+			const response = await artInstituteChicago.get(
+				`artworks/search?size=20&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles,style_title,category_titles,date_start`
 			);
 			console.log(response);
 			setSculptureListArtsy(response.data.data);

@@ -13,8 +13,9 @@ const SculptureList = () => {
 							key={sculpture.id}
 							id={sculpture.id}
 							url={`https://www.artic.edu/iiif/2/${sculpture.image_id}/full/843,/0/default.jpg`}
-							/* date={sculpture.created_at} */
+							date={sculpture.date_start}
 							description={sculpture.title}
+							category={sculpture.category_titles[0]}
 						/>
 				  ))
 				: []}
