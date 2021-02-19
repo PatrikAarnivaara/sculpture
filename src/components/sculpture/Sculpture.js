@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Searchbar from '../../UI/Searchbar/Searchbar';
-import SculptureList from './SculptureList';
+import { SculptureContext } from '../../context/SculptureContext';
+import FilterList from '../../UI/Filter/FilterList';
 import './Sculpture.css';
 
 const Sculpture = () => {
+	const { sculptureListAIC } = useContext(SculptureContext);
 	return (
 		/* Spinner and timer */
 		<div>
-			<Searchbar />
-			<SculptureList></SculptureList>
+			<div className="search-filter-sort">
+				<Searchbar />
+				<FilterList items={sculptureListAIC} />
+			</div>
 		</div>
 	);
 };
