@@ -9,10 +9,7 @@ const Searchbar = () => {
 	const searchSculptures = (e) => {
 		e.preventDefault();
 		getListOfSculptures(query);
-		console.log('Submit');
 	};
-
-	console.log(query);
 
 	return (
 		<div className="container-searchbar">

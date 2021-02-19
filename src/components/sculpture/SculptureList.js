@@ -1,21 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import SculptureListItem from './SculptureListItem';
-import { SculptureContext } from '../../context/SculptureContext';
 
-const SculptureList = () => {
-	const { sculptureListArtsy } = useContext(SculptureContext);
-	console.log(sculptureListArtsy)
+const SculptureList = ({ items }) => {
 	return (
 		<div className="container">
-			{sculptureListArtsy.length
-				? sculptureListArtsy.map((sculpture) => (
+			{items.length
+				? items.map((item) => (
 						<SculptureListItem
-							key={sculpture.id}
-							id={sculpture.id}
-							url={`https://www.artic.edu/iiif/2/${sculpture.image_id}/full/843,/0/default.jpg`}
-							date={sculpture.date_start}
-							description={sculpture.title}
-							category={sculpture.category_titles[0]}
+							key={item.id}
+							id={item.id}
+							url={`https://www.artic.edu/iiif/2/${item.image_id}/full/843,/0/default.jpg`}
+							date={item.date_start}
+							description={item.title}
+							category={item.category_titles[0]}
 						/>
 				  ))
 				: []}

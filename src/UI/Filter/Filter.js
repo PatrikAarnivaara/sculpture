@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Filter.css';
 
+
 const Filter = ({ id, label, options, prompt, value, onChange }) => {
 	console.log(value);
 	const [open, setOpen] = useState(false);

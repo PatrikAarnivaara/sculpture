@@ -1,28 +1,24 @@
-import { queryAllByDisplayValue } from '@testing-library/react';
 import React, { createContext, useState } from 'react';
-/* import getSculptures from '../api/getSculptures'; */
 import artInstituteChicago from '../api/artInstituteChicago';
 export const SculptureContext = createContext();
 
 const SculptureContextProvider = (props) => {
 	const [sculptures, setSculptures] = useState([]);
-	const [sculptureListArtsy, setSculptureListArtsy] = useState([]);
+	const [sculptureListAIC, setSculptureListAIC] = useState([]);
 
-	/* useEffect(() => { */
 	const getListOfSculptures = async (query) => {
 		try {
-			/* const response = await getSculptures(query); */
 			const response = await artInstituteChicago.get(
 				`artworks/search?size=20&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles,style_title,category_titles,date_start`
 			);
-			console.log(response);
-			setSculptureListArtsy(response.data.data);
-		} catch (error) {
-			console.log(error);
+			if (response.status === 200) {
+				console.log(response);
+				setSculptureListAIC(response.data.data);
+			}
+		} catch (ex) {
+			return { success: false, error: ex.message };
 		}
 	};
-	/* 	getListOfSculptures();
-	}, []); */
 
 	const addSculpture = (id, url, description) => {
 		if (sculptures.some((sculpture) => sculpture.id === id)) {
@@ -38,7 +34,14 @@ const SculptureContextProvider = (props) => {
 
 	return (
 		<SculptureContext.Provider
-			value={{ sculptures, sculptureListArtsy, getListOfSculptures, addSculpture, removeSculpture }}
+			value={{
+				sculptures,
+				sculptureListAIC,
+				setSculptureListAIC,
+				getListOfSculptures,
+				addSculpture,
+				removeSculpture,
+			}}
 		>
 			{props.children}
 		</SculptureContext.Provider>
