@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Searchbar from '../../UI/Searchbar/Searchbar';
 import { SculptureContext } from '../../context/SculptureContext';
 import FilterList from '../../UI/Filter/FilterList';
+import Dropdown from '../../UI/Filter/Dropdown';
 import './Sculpture.css';
 
 const Sculpture = () => {
@@ -11,6 +12,7 @@ const Sculpture = () => {
 		<div>
 			<div className="search-filter-sort">
 				<Searchbar />
+				<Dropdown header="Filter by category" items={sculptureListAIC} />
 				<FilterList items={sculptureListAIC} />
 			</div>
 		</div>

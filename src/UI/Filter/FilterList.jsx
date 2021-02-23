@@ -2,29 +2,34 @@ import React, { useState } from 'react';
 import SculptureList from '../../components/sculpture/SculptureList';
 
 const FilterList = ({ items }) => {
-	const [selected, setSelected] = useState(items);
-	console.log(selected);
+	const [selectedItems, setSelectedItems] = useState(items);
+	const [category, setCategory] = useState([]);
 
 	function onChangeItem(event) {
+		setCategory([...category, event.target.value]);
+		filterSelectedItems();
+	}
+
+	function clearFilter() {
+		setSelectedItems([]);
+		setCategory([]);
+	}
+
+	function filterSelectedItems() {
 		let filteredItems = items;
-		filteredItems = filteredItems.filter((selected) => selected.category_titles[0] === event.target.value);
-		setSelected(filteredItems);
+		filteredItems = filteredItems.filter((filteredItem) => category.indexOf(filteredItem.category_titles[0]) > -1);
+		setSelectedItems(filteredItems);
 	}
 
 	return (
 		<div>
-			<div>
-				<button
-					onClick={() => {
-						setSelected([]);
-					}}
-				>
-					clear
-				</button>
-				<select className="custom-select" onChange={onChangeItem}>
+			<div></div>
+			{/* <div>
+				<button onClick={clearFilter}>clear</button>
+				<select name="categories" id="categories" className="custom-select" onChange={onChangeItem} >
 					{items.length ? (
 						items.map((item) => (
-							<option className="dropdown-filter" value={item.category_titles[0]} key={item.id}>
+							<option className="dropdown-filter" type="checkbox" value={item.category_titles[0]} key={item.id}>
 								{item.category_titles[0]}
 							</option>
 						))
@@ -32,8 +37,8 @@ const FilterList = ({ items }) => {
 						<option>Filter by Category</option>
 					)}
 				</select>
-			</div>
-			<SculptureList items={selected.length === 0 ? items : selected} />
+			</div> */}
+			<SculptureList items={selectedItems.length === 0 ? items : selectedItems} />
 		</div>
 	);
 };
