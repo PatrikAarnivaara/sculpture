@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { SculptureContext } from '../../context/SculptureContext';
 
-function DropdownItem(item) {
-    console.log(item)
+function DropdownItem({ item, label }) {
 	const [selected, setSelected] = useState(false);
+	const { selectedCategories } = useContext(SculptureContext);
 
-	const handleSelected = () => {
+	const handleSelected = (event) => {
 		if (!selected) {
-            console.log(true)
 			setSelected(true);
+			selectedCategories(event.target.value);
 		} else {
 			setSelected(false);
 		}
@@ -15,7 +16,7 @@ function DropdownItem(item) {
 
 	return (
 		<li onClick={handleSelected} value={item.id} key={item.id} className={selected ? 'selected' : null}>
-			{item.category_titles[0]}
+			{item[label]}
 		</li>
 	);
 }

@@ -2,9 +2,10 @@ import React from 'react';
 import SculptureListItem from './SculptureListItem';
 
 const SculptureList = ({ items }) => {
+	console.log("sculptureList",items)
 	return (
 		<div className="container">
-			{items.length
+			{items.length > 0
 				? items.map((item) => (
 						<SculptureListItem
 							key={item.id}
