@@ -2,7 +2,6 @@ import React from 'react';
 import SculptureListItem from './SculptureListItem';
 
 const SculptureList = ({ items }) => {
-	console.log("sculptureList",items)
 	return (
 		<div className="container">
 			{items.length > 0
