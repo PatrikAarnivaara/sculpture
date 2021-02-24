@@ -9,18 +9,14 @@ const SculptureContextProvider = (props) => {
 	const [listOfFilteredSculptures, setListOfFilteredSculptures] = useState([]);
 	const [testList, setTestList] = useState([]);
 
-	/* console.log('itemSelected', itemsSelected);
-	console.log('listOfFilteredSculptures', listOfFilteredSculptures);
-	console.log('testList', testList); */
-
 	useEffect(() => {
 		function filterSelectedItems() {
 			let filteredItems = listOfFilteredSculptures;
-			console.log(filteredItems);
-
-			filteredItems = filteredItems.filter(function (filteredItem) {
-				return itemsSelected.indexOf(filteredItem.id) > -1;
-			});
+			if (itemsSelected.length > 0) {
+				filteredItems = filteredItems.filter(function (filteredItem) {
+					return itemsSelected.indexOf(filteredItem.id) > -1;
+				});
+			}
 			setTestList(filteredItems);
 		}
 		filterSelectedItems();
@@ -43,10 +39,7 @@ const SculptureContextProvider = (props) => {
 
 	function selectedCategories(selected) {
 		setItemsSelected([...itemsSelected, selected]);
-		console.log('item 33', itemsSelected);
 	}
-
-	console.log('item 37', itemsSelected);
 
 	const addSculpture = (id, url, description) => {
 		if (sculptures.some((sculpture) => sculpture.id === id)) {
