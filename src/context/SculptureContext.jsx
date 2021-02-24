@@ -4,23 +4,23 @@ export const SculptureContext = createContext();
 
 const SculptureContextProvider = (props) => {
 	const [sculptures, setSculptures] = useState([]);
-	const [sculptureListAIC, setSculptureListAIC] = useState([]);
+	const [listCategories, setListCategories] = useState([]);
 	const [itemsSelected, setItemsSelected] = useState([]);
-	const [listOfFilteredSculptures, setListOfFilteredSculptures] = useState([]);
-	const [testList, setTestList] = useState([]);
+	const [listArtInstituteChicago, setlistArtInstituteChicago] = useState([]);
+	const [listFilteredSculptures, setListFilteredSculptures] = useState([]);
 
 	useEffect(() => {
 		function filterSelectedItems() {
-			let filteredItems = listOfFilteredSculptures;
+			let filteredItems = listArtInstituteChicago;
 			if (itemsSelected.length > 0) {
 				filteredItems = filteredItems.filter(function (filteredItem) {
 					return itemsSelected.indexOf(filteredItem.id) > -1;
 				});
 			}
-			setTestList(filteredItems);
+			setListFilteredSculptures(filteredItems);
 		}
 		filterSelectedItems();
-	}, [itemsSelected, listOfFilteredSculptures]);
+	}, [itemsSelected, listArtInstituteChicago]);
 
 	const getListOfSculptures = async (query) => {
 		try {
@@ -28,9 +28,9 @@ const SculptureContextProvider = (props) => {
 				`artworks/search?size=10&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles,style_title,category_titles,date_start`
 			);
 			if (response.status === 200) {
-				setSculptureListAIC(response.data.data);
-				setListOfFilteredSculptures(response.data.data);
-				setTestList(response.data.data);
+				setListCategories(response.data.data);
+				setlistArtInstituteChicago(response.data.data);
+				setListFilteredSculptures(response.data.data);
 			}
 		} catch (ex) {
 			return { success: false, error: ex.message };
@@ -57,10 +57,8 @@ const SculptureContextProvider = (props) => {
 		<SculptureContext.Provider
 			value={{
 				sculptures,
-				sculptureListAIC,
-				listOfFilteredSculptures,
-				testList,
-				setSculptureListAIC,
+				listCategories,
+				listFilteredSculptures,
 				getListOfSculptures,
 				selectedCategories,
 				addSculpture,
