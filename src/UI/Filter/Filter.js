@@ -46,7 +46,7 @@ const Filter = ({ id, label, options, prompt, value, onChange }) => {
 				<div className={`arrow ${open ? 'open' : null}`}></div>
 			</div>
 			<div className={`options ${open ? 'open' : null}`}>
-				{options.lengt
+				{options.length
 					? filter(options).map((option) => (
 							<div
 								key={option[id]}
