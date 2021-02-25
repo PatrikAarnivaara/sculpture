@@ -3,7 +3,7 @@ import { SculptureContext } from '../../context/SculptureContext';
 
 function DropdownItem({ item, label }) {
 	const [selected, setSelected] = useState(false);
-	const { selectedCategories } = useContext(SculptureContext);
+	const { selectedCategories, removeCategory } = useContext(SculptureContext);
 
 	const handleSelected = (event) => {
 		if (!selected) {
@@ -11,6 +11,7 @@ function DropdownItem({ item, label }) {
 			selectedCategories(event.target.value);
 		} else {
 			setSelected(false);
+			removeCategory(event.target.value);
 		}
 	};
 
