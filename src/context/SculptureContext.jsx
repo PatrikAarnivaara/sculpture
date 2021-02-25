@@ -41,6 +41,14 @@ const SculptureContextProvider = (props) => {
 		setItemsSelected([...itemsSelected, selected]);
 	}
 
+	function removeCategory(selected) {
+		let n = selected;
+		let filteredCategories = itemsSelected.filter(function (itemSelected) {
+			return itemSelected !== n;
+		});
+		setItemsSelected(filteredCategories);
+	}
+
 	const addSculpture = (id, url, description) => {
 		if (sculptures.some((sculpture) => sculpture.id === id)) {
 			return;
@@ -63,6 +71,7 @@ const SculptureContextProvider = (props) => {
 				selectedCategories,
 				addSculpture,
 				removeSculpture,
+				removeCategory
 			}}
 		>
 			{props.children}
