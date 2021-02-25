@@ -2,16 +2,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 10vh;
-	width: 50vw;
-	/* padding: 1em; */
-	margin-top: 1.6em;
+	/* height: 10vh; */
+	width: 20%;
+	padding: 1em;
+	/* margin-top: 1.6em;
 	margin-bottom: 0.2em;
+	margin-left: 10%; */
+	margin-left: 1em
 }
 
 .container-searchbar input {
 	border: none;
-	width: 40vw;
+	/* width: 40vw; */
 	background-color: #f7eeeb;
 	/* border-bottom: 2px solid #282c34; */
 	outline: none;

@@ -4,15 +4,22 @@ input#menu {
 
 .dropdown-menu {
 	background: #fff;
-	padding: 20px;
+	padding: 0px 0px 0px 20px;
 	background-color: #f7eeeb;
-	width: 30%;
+	width: 20%;
+	/* margin-top: 10px;
+	margin-left: 10%;
+	margin-right: 10%; */
 }
 
 .dropdown-menu ul {
 	cursor: pointer;
 	list-style-type: none;
-	padding: 0;
+	padding: 5px;
+}
+
+.dropdown-menu li {
+	padding: 0.3rem;
 }
 
 .dropdown-menu li:hover {
@@ -32,8 +39,8 @@ input#menu {
 .dropdown-menu label {
 	display: block;
 	cursor: pointer;
-	background: url(../../assets/closed.png) no-repeat left center;
-	padding: 30px 0 30px 80px;
+	background: url(../../assets/filter.png) no-repeat left center;
+	padding: 30px 0 30px 40px;
 }
 
 /* Toggle Effect */
@@ -49,5 +56,5 @@ input:checked ~ .menu-content {
 }
 
 input:checked ~ label {
-	background: url(../../assets/open.png) no-repeat left center;
+	background: url(../../assets/filter.png) no-repeat left center;
 }
