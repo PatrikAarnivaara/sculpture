@@ -3,7 +3,6 @@ import './Filter.css';
 
 
 const Filter = ({ id, label, options, prompt, value, onChange }) => {
-	console.log(value);
 	const [open, setOpen] = useState(false);
 	const [query, setQuery] = useState('');
 	const ref = useRef(null);

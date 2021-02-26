@@ -13,8 +13,8 @@ const SculptureContextProvider = (props) => {
 		function filterSelectedItems() {
 			let filteredItems = listArtInstituteChicago;
 			if (itemsSelected.length > 0) {
-				filteredItems = filteredItems.filter(function (filteredItem) {
-					return itemsSelected.indexOf(filteredItem.id) > -1;
+				filteredItems = filteredItems.filter((filteredItem) => {
+					return itemsSelected.includes(filteredItem.category_titles[0]);
 				});
 			}
 			setListFilteredSculptures(filteredItems);
@@ -28,7 +28,8 @@ const SculptureContextProvider = (props) => {
 				`artworks/search?size=10&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles,style_title,category_titles,date_start`
 			);
 			if (response.status === 200) {
-				setListCategories(response.data.data);
+				filterCategories(response.data.data);
+				/* setListCategories(response.data.data); */
 				setlistArtInstituteChicago(response.data.data);
 				setListFilteredSculptures(response.data.data);
 			}
@@ -61,6 +62,30 @@ const SculptureContextProvider = (props) => {
 		setSculptures(sculptures.filter((sculpture) => sculpture.id !== id));
 	};
 
+	function filterCategories(responseDataList) {
+		
+		/* Move to separate function and change name of variable x */
+		const x = responseDataList.map((responseData) => {
+			return responseData.category_titles[0];
+		});
+
+		let temp = '';
+		let counter = 0;
+		let tempArray = [];
+		let sortedList = x.sort();
+
+		sortedList.forEach((element) => {
+			if (element !== temp) {
+				counter++;
+				temp = element;
+				tempArray.push({ id: counter, category: temp });
+			} else {
+				return;
+			}
+		});
+		setListCategories(tempArray);
+	}
+
 	return (
 		<SculptureContext.Provider
 			value={{
@@ -71,7 +96,7 @@ const SculptureContextProvider = (props) => {
 				selectedCategories,
 				addSculpture,
 				removeSculpture,
-				removeCategory
+				removeCategory,
 			}}
 		>
 			{props.children}

@@ -5,19 +5,20 @@ function DropdownItem({ item, label }) {
 	const [selected, setSelected] = useState(false);
 	const { selectedCategories, removeCategory } = useContext(SculptureContext);
 
-	const handleSelected = (event) => {
+	const handleSelected = (id) => {
 		if (!selected) {
 			setSelected(true);
-			selectedCategories(event.target.value);
+			selectedCategories(id);
 		} else {
 			setSelected(false);
-			removeCategory(event.target.value);
+			removeCategory(id);
 		}
 	};
 
+	/* Make category generic and dynamic */
 	return (
-		<li onClick={handleSelected} value={item.id} key={item.id} className={selected ? 'selected' : null}>
-			{item[label]}
+		<li onClick={() => handleSelected(item.category)} key={item.id} className={selected ? 'selected' : null}>
+			{item.category}
 		</li>
 	);
 }
