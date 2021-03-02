@@ -26,3 +26,9 @@
 ::placeholder {
 	color: #afafaf;
 }
+
+@media screen and (max-width: 600px) {
+	.container-searchbar {
+		width: 100%;
+	}
+}

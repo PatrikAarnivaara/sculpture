@@ -8,7 +8,6 @@ import './Sculpture.css';
 const SculptureListItem = ({ id, url, date, description, category }) => {
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
-
 	const handleClick = () => {
 		/* let img = document.getElementById(`${id}`); */
 		if (!clicked) {

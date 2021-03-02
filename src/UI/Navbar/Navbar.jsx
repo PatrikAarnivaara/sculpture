@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-/* import sculptureText from '../../assets/sculpture_text.png' */
+import collection from '../../assets/collection.svg'
 import sculptureIcon from '../../assets/sculpture.png';
 
 const NavBar = () => {
@@ -17,7 +17,7 @@ const NavBar = () => {
 				to="/collection"
 				className="nav-collection-logo"
 			>
-				<img src={sculptureIcon} alt="sculpture icon" style={{ width: 'auto', maxHeight: 60 }} />
+				<img src={collection} alt="sculpture icon" style={{ width: 'auto', height: '40px' }} />
 			</NavLink>
 		</nav>
 	);
