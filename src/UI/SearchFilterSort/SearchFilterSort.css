@@ -1,9 +1,15 @@
 .search-filter-sort {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 2em;
-    /* position: absolute; */
-  }
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+/* 	margin-top: 2em;
+ */	/* position: absolute; */
+}
+
+@media screen and (max-width: 600px) {
+	.search-filter-sort {
+		flex-direction: column;
+	}
+}

@@ -9,32 +9,57 @@
 	color: #282c34;
 }
 
-.unselected,
-.selected {
-	background-color: #ffffff;
+.card {
 	margin: 1em;
 	padding: 1em;
-	font-size: 1rem;
 	cursor: pointer;
+	position: relative;
+	width: 50%;
+	max-width: 300px;
 }
 
-.selected {
-	background-color: #dea6a6;
+.card-info {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.container p,
-span {
-	font-size: 1rem;
+.overlay {
+	position: absolute;
+	bottom: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(190, 188, 188, 0.8); /* Black see-through */
+	color: #f1f1f1;
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	color: white;
+	font-size: 0.9rem;
+	padding: 1em;
+	/* text-align: center; */
 }
 
-.container img {
+.card:hover .overlay {
+	opacity: 1;
+}
+
+.card p {
+	padding: 0.2em;
+}
+
+.card img {
 	max-width: 300px;
 	height: auto;
+	/* display: block;
+  width: 100%;
+  height: auto; */
 }
 
-.container img:hover {
+/* .container img:hover {
 	opacity: 0.8;
-}
+} */
 
 .loader {
 	border: 10px solid #f3f3f3;

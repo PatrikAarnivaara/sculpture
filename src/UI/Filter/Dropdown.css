@@ -58,3 +58,9 @@ input:checked ~ .menu-content {
 input:checked ~ label {
 	background: url(../../assets/filter.png) no-repeat left center;
 }
+
+@media screen and (max-width: 600px) {
+	.dropdown-menu {
+		width: 100%;
+	}
+}
