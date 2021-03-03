@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { SculptureContext } from '../../context/SculptureContext';
 
-function DropdownItem({ item, label }) {
+function FilterItem({ item, label }) {
 	const [selected, setSelected] = useState(false);
 	const { selectedCategories, removeCategory } = useContext(SculptureContext);
 
@@ -23,4 +23,4 @@ function DropdownItem({ item, label }) {
 	);
 }
 
-export default DropdownItem;
+export default FilterItem;

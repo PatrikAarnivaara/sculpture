@@ -27,6 +27,11 @@
 	height: auto;
 }
 
+.collection-wrapper h3 {
+	top: 40vh;
+	position: absolute;
+}
+
 .collection-item {
 	background-color: #ffffff;
 	margin: 1em;

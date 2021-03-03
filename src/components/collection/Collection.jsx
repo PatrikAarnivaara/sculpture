@@ -6,9 +6,9 @@ import './Collection.css';
 const Collection = () => {
 	return (
 		<div>
-			<div className="collection-header">
-				<h1>collection</h1>
-			</div>
+			{/* <div className="collection-header">
+				<h2>collection</h2>
+			</div> */}
 			{/* <CheckboxLogic /> */}
 			<CollectionList />
 		</div>

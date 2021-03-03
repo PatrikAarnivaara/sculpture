@@ -3,12 +3,12 @@
 	align-items: center;
 	justify-content: center;
 	/* height: 10vh; */
-	width: 20%;
-	padding: 1em;
+	/* width: 20%; */
+	/* padding: 1em; */
 	/* margin-top: 1.6em;
 	margin-bottom: 0.2em;
 	margin-left: 10%; */
-	margin-left: 1em
+	/* margin-left: 1em */
 }
 
 .container-searchbar input {
@@ -19,7 +19,7 @@
 	outline: none;
 	color: #282c34;
 	font-size: 1.4rem;
-	height: 8vh;
+	/* height: 8vh; */
 	text-indent: 1em;
 }
 

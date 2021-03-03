@@ -1,0 +1,17 @@
+.sort-btn {
+	background-color: #f1f1f1;
+	border: none;
+	padding: 8px 16px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.sort-btn img {
+	width: 40px;
+	height: 40px;
+}
+
+.sort-btn:hover {
+	background-color: #4caf50;
+	color: white;
+}
