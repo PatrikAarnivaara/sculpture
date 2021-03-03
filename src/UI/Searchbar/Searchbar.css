@@ -13,13 +13,13 @@
 
 .container-searchbar input {
 	border: none;
-	/* width: 40vw; */
+	width: 40vw;
 	background-color: #f7f6eb;
 	/* border-bottom: 2px solid #282c34; */
 	outline: none;
 	color: #282c34;
 	font-size: 1.4rem;
-	/* height: 8vh; */
+	height: 6vh;
 	text-indent: 1em;
 }
 

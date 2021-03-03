@@ -4,12 +4,12 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-/* 	margin-top: 2em;
- */	/* position: absolute; */
+	background-color: #faddd7;
 }
 
 @media screen and (max-width: 600px) {
 	.search-filter-sort {
 		flex-direction: column;
+		justify-content: space-evenly;
 	}
 }

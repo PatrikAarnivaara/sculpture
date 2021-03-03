@@ -1,5 +1,6 @@
 .sort-btn {
-	background-color: #f1f1f1;
+	/* background-color: #ff674d; */
+    background-color: #FFDDD7;
 	border: none;
 	padding: 8px 16px;
 	transition-duration: 0.4s;
@@ -12,6 +13,6 @@
 }
 
 .sort-btn:hover {
-	background-color: #4caf50;
+	background-color: #FF917D;
 	color: white;
 }

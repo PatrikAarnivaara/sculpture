@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { SculptureContext } from '../../context/SculptureContext';
 
-function FilterItem({ item, label }) {
+function FilterItem({ item }) {
 	const [selected, setSelected] = useState(false);
 	const { selectedCategories, removeCategory } = useContext(SculptureContext);
 
