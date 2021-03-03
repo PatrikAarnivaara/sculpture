@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import collection from '../../assets/bookmarks.svg'
-import sculptureIcon from '../../assets/sculpture.svg';
+/* import sculptureIcon from '../../assets/sculpture.svg'; */
 
 const NavBar = () => {
 	return (
