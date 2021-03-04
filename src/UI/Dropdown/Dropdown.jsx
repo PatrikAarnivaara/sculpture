@@ -1,17 +1,13 @@
 import React from 'react';
-import filterIcon from '../../assets/filter_dots.svg';
-import Filter from '../Filter/Filter';
 import './Dropdown.css';
 
-const Dropdown = ({ items }) => {
+const Dropdown = ({ list, icon }) => {
 	return (
 		<div className="dropdown">
 			<button className="dropbtn">
-				<img src={filterIcon} alt="filter" />
+				<img src={icon} alt="filter" />
 			</button>
-			<div className="dropdown-content">
-				<Filter items={items} />
-			</div>
+			<div className="dropdown-content">{list}</div>
 		</div>
 	);
 };
