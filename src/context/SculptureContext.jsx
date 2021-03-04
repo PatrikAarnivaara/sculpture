@@ -8,6 +8,7 @@ const SculptureContextProvider = (props) => {
 	const [itemsSelected, setItemsSelected] = useState([]);
 	const [listArtInstituteChicago, setlistArtInstituteChicago] = useState([]);
 	const [listFilteredSculptures, setListFilteredSculptures] = useState([]);
+	/* const [sortedList, setSortedList] = useEffect([]) */
 
 	useEffect(() => {
 		function filterSelectedItems() {
@@ -29,7 +30,6 @@ const SculptureContextProvider = (props) => {
 			);
 			if (response.status === 200) {
 				filterCategories(response.data.data);
-				/* setListCategories(response.data.data); */
 				setlistArtInstituteChicago(response.data.data);
 				setListFilteredSculptures(response.data.data);
 			}
@@ -97,6 +97,7 @@ const SculptureContextProvider = (props) => {
 				addSculpture,
 				removeSculpture,
 				removeCategory,
+				setListFilteredSculptures
 			}}
 		>
 			{props.children}
