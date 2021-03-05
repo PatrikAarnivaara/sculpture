@@ -40,7 +40,7 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content li:hover {
-	background-color: #f1f1f1;
+	background-color: #E34D4D;
 }
 
 /* Show the dropdown menu on hover */
@@ -50,7 +50,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-	background-color: #ff917d;
+	background-color: #937dff;
 }
 
 @media screen and (max-width: 600px) {
