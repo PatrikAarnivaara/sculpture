@@ -21,21 +21,23 @@ const SculptureListItem = ({ id, url, date, description, category }) => {
 	return (
 		/* Change className */
 		<div className="card">
-			<img src={url} alt={description} id={id} />
-			<div className="overlay">
-				<div>
-					<div className="card-info">
-						<div className="card-text">
-							<p>{description}</p>
-							<p>{date}</p>
-							<p>{category}</p>
+			<div>
+				<img src={url} alt={description} id={id} />
+				<div className="overlay">
+					<div>
+						<div className="card-info">
+							<div className="card-text">
+								<p>{description}</p>
+								<p>{date}</p>
+								<p>{category}</p>
+							</div>
+							<img
+								src={clicked ? bookmarked : unbookmarked}
+								alt="bookmark"
+								onClick={handleClick}
+								style={{ width: 'auto', height: '30px' }}
+							/>
 						</div>
-						<img
-							src={clicked ? bookmarked : unbookmarked}
-							alt="bookmark"
-							onClick={handleClick}
-							style={{ width: 'auto', height: '30px' }}
-						/>
 					</div>
 				</div>
 			</div>

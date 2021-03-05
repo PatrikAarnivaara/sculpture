@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import SculptureList from '../sculpture/SculptureList';
 import { SculptureContext } from '../../context/SculptureContext';
+import labyrinthIcon from '../../assets/camera.svg';
 import './Sculpture.css';
 
 const Sculpture = () => {
@@ -9,7 +10,13 @@ const Sculpture = () => {
 		/* Spinner and timer */
 		<div>
 			<div>
-				<SculptureList items={listFilteredSculptures} />
+				{listFilteredSculptures <= 0 ? (
+					<div className="animation">
+						<img className="top" src={labyrinthIcon} alt="labyrinth-icon" />
+					</div>
+				) : (
+					<SculptureList items={listFilteredSculptures} />
+				)}
 			</div>
 		</div>
 	);
