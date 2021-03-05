@@ -8,15 +8,19 @@ const SculptureContextProvider = (props) => {
 	const [itemsSelected, setItemsSelected] = useState([]);
 	const [listArtInstituteChicago, setlistArtInstituteChicago] = useState([]);
 	const [listFilteredSculptures, setListFilteredSculptures] = useState([]);
-	const [sortedList, setSortedList] = useState([]);
+	const [sortedList09, setSortedList09] = useState([]);
+	const [sortedList90, setSortedList90] = useState([]);
 	const [sortedListAZ, setSortedListAZ] = useState([]);
 	const [test, setTest] = useState('');
 
 	useEffect(() => {
 		function filterSelectedItems() {
 			switch (test) {
-				case 'sortChronological':
-					setListFilteredSculptures(sortedList);
+				case 'sort09':
+					setListFilteredSculptures(sortedList09);
+					break;
+				case 'sort90':
+					setListFilteredSculptures(sortedList90);
 					break;
 				case 'sortAlphabetical':
 					setListFilteredSculptures(sortedListAZ);
@@ -33,7 +37,15 @@ const SculptureContextProvider = (props) => {
 			}
 		}
 		filterSelectedItems();
-	}, [itemsSelected, listArtInstituteChicago, setListFilteredSculptures, sortedList, sortedListAZ, test]);
+	}, [
+		itemsSelected,
+		listArtInstituteChicago,
+		setListFilteredSculptures,
+		sortedList09,
+		sortedList90,
+		sortedListAZ,
+		test,
+	]);
 
 	const getListOfSculptures = async (query) => {
 		try {
@@ -109,7 +121,8 @@ const SculptureContextProvider = (props) => {
 				addSculpture,
 				removeSculpture,
 				removeCategory,
-				setSortedList,
+				setSortedList09,
+				setSortedList90,
 				setSortedListAZ,
 				setTest,
 			}}
