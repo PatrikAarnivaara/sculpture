@@ -7,6 +7,9 @@ const SortChronological = ({ items, setItems09, setItems90, test }) => {
 	const [flipIcon, setFlipIcon] = useState(false);
 
 	function handleClick() {
+		if (items.length <= 0) {
+			return;
+		}
 		if (!flipIcon) {
 			setFlipIcon(true);
 			let sort09 = items.sort(function (a, b) {

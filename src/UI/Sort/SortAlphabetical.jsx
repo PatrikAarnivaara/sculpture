@@ -7,6 +7,9 @@ const SortAlphabetical = ({ items, setItemsAZ, setItemsZA, test }) => {
 	const [flipIcon, setFlipIcon] = useState(false);
 
 	function handleClick() {
+		if (items.length <= 0) {
+			return;
+		}
 		if (!flipIcon) {
 			setFlipIcon(true);
 			const sortedAZ = items.sort(function (a, b) {
