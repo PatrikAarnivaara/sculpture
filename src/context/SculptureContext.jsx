@@ -30,14 +30,11 @@ const SculptureContextProvider = (props) => {
 					setListFilteredSculptures(sortedListZA);
 					break;
 				case 'filter':
-					console.log(listArtInstituteChicago);
 					let filteredItems = listArtInstituteChicago;
 					filteredItems = filteredItems.filter((filteredItem) => {
 						return itemsSelected.includes(filteredItem.category_titles[0]);
 					});
-					console.log(filteredItems);
 					if (filteredItems <= 0) {
-						console.log(listArtInstituteChicago);
 						setListFilteredSculptures(listArtInstituteChicago);
 					} else {
 						setListFilteredSculptures(filteredItems);
@@ -68,6 +65,7 @@ const SculptureContextProvider = (props) => {
 			if (response.status === 200) {
 				filterCategories(response.data.data);
 				setlistArtInstituteChicago(response.data.data);
+				/* Necessary? */
 				setListFilteredSculptures(response.data.data);
 			}
 		} catch (ex) {
