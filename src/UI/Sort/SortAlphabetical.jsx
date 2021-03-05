@@ -2,7 +2,7 @@ import React from 'react';
 import SortButton from './SortButton';
 import sortAtoZ from '../../assets/a_z.svg';
 
-const SortAlphabetical = ({ items, setItems }) => {
+const SortAlphabetical = ({ items, setItems, test }) => {
 	function handleClick() {
 		const sortedAlphabetically = items.sort(function (a, b) {
 			const titleA = a.title.toUpperCase();
@@ -16,7 +16,7 @@ const SortAlphabetical = ({ items, setItems }) => {
 
 			return 0;
 		});
-
+		test('sortAlphabetical')
 		setItems(sortedAlphabetically);
 	}
 

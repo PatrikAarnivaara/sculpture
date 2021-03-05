@@ -10,15 +10,17 @@ import filterIcon from '../../assets/filter_dots.svg';
 import './SearchFilterSort.css';
 
 const SearchFilterSort = () => {
-	const { listCategories, listFilteredSculptures, setListFilteredSculptures } = useContext(SculptureContext);
+	const { listCategories, listFilteredSculptures, setSortedList, setSortedListAZ, setTest } = useContext(
+		SculptureContext
+	);
 
 	return (
 		<div className="search-filter-sort">
 			<Searchbar />
 			<div>
 				<Dropdown list={<Filter items={listCategories} />} icon={filterIcon} />
-				<SortAlphabetical items={listFilteredSculptures} setItems={setListFilteredSculptures} />
-				<SortChronological items={listFilteredSculptures} setItems={setListFilteredSculptures}/>
+				<SortAlphabetical items={listFilteredSculptures} setItems={setSortedListAZ} test={setTest} />
+				<SortChronological items={listFilteredSculptures} setItems={setSortedList} test={setTest} />
 			</div>
 		</div>
 	);
