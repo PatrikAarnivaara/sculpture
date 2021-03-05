@@ -2,20 +2,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* height: 10vh; */
-	/* width: 20%; */
-	/* padding: 1em; */
-	/* margin-top: 1.6em;
-	margin-bottom: 0.2em;
-	margin-left: 10%; */
-	/* margin-left: 1em */
 }
 
 .container-searchbar input {
 	border: none;
 	width: 40vw;
 	background-color: #f7f6eb;
-	/* border-bottom: 2px solid #282c34; */
 	outline: none;
 	color: #282c34;
 	font-size: 1.4rem;
@@ -29,6 +21,11 @@
 
 @media screen and (max-width: 600px) {
 	.container-searchbar {
+		margin-top: 1em;
 		width: 100%;
+	}
+
+	.container-searchbar input {
+		height: 8vh;
 	}
 }
