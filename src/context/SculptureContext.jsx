@@ -11,6 +11,7 @@ const SculptureContextProvider = (props) => {
 	const [sortedList09, setSortedList09] = useState([]);
 	const [sortedList90, setSortedList90] = useState([]);
 	const [sortedListAZ, setSortedListAZ] = useState([]);
+	const [sortedListZA, setSortedListZA] = useState([]);
 	const [test, setTest] = useState('');
 
 	useEffect(() => {
@@ -22,8 +23,11 @@ const SculptureContextProvider = (props) => {
 				case 'sort90':
 					setListFilteredSculptures(sortedList90);
 					break;
-				case 'sortAlphabetical':
+				case 'sortAZ':
 					setListFilteredSculptures(sortedListAZ);
+					break;
+				case 'sortZA':
+					setListFilteredSculptures(sortedListZA);
 					break;
 				case 'filter':
 					let filteredItems = listArtInstituteChicago;
@@ -44,6 +48,7 @@ const SculptureContextProvider = (props) => {
 		sortedList09,
 		sortedList90,
 		sortedListAZ,
+		sortedListZA,
 		test,
 	]);
 
@@ -124,6 +129,7 @@ const SculptureContextProvider = (props) => {
 				setSortedList09,
 				setSortedList90,
 				setSortedListAZ,
+				setSortedListZA,
 				setTest,
 			}}
 		>

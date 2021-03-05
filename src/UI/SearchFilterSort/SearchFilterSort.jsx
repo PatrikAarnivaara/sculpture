@@ -16,6 +16,7 @@ const SearchFilterSort = () => {
 		setSortedList09,
 		setSortedList90,
 		setSortedListAZ,
+		setSortedListZA,
 		setTest,
 	} = useContext(SculptureContext);
 
@@ -24,7 +25,12 @@ const SearchFilterSort = () => {
 			<Searchbar />
 			<div>
 				<Dropdown list={<Filter items={listCategories} />} icon={filterIcon} />
-				<SortAlphabetical items={listFilteredSculptures} setItems={setSortedListAZ} test={setTest} />
+				<SortAlphabetical
+					items={listFilteredSculptures}
+					setItemsAZ={setSortedListAZ}
+					setItemsZA={setSortedListZA}
+					test={setTest}
+				/>
 				<SortChronological
 					items={listFilteredSculptures}
 					setItems09={setSortedList09}

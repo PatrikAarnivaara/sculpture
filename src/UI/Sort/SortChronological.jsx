@@ -26,7 +26,7 @@ const SortChronological = ({ items, setItems09, setItems90, test }) => {
 		}
 	}
 
-	return <SortButton image={flipIcon ? nineZero : zeroNine} description="sort 0-9" handleClick={handleClick} />;
+	return <SortButton image={flipIcon ? nineZero : zeroNine} description="sort 0-9/9-0" handleClick={handleClick} />;
 };
 
 export default SortChronological;
