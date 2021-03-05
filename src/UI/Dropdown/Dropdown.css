@@ -52,3 +52,10 @@
 .dropdown:hover .dropbtn {
 	background-color: #ff917d;
 }
+
+@media screen and (max-width: 600px) {
+	/* .dropdown-content {
+		width: 100%;
+		overflow: auto;
+	} */
+}

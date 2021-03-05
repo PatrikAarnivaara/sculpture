@@ -9,17 +9,12 @@ const SculptureListItem = ({ id, url, date, description, category }) => {
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
 	const handleClick = () => {
-		/* let img = document.getElementById(`${id}`); */
 		if (!clicked) {
 			setClicked(true);
 			addSculpture(id, url, description);
-			/* img.style.transform = 'scale(1.5)';
-			img.style.transition = 'transform 0.25s ease'; */
 		} else {
 			setClicked(false);
 			removeSculpture(id);
-			/* img.style.transform = 'scale(1)';
-			img.style.transition = 'transform 0.25s ease'; */
 		}
 	};
 
