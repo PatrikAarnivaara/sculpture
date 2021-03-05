@@ -9,6 +9,61 @@
 	color: #282c34;
 }
 
+.animation {
+	/* min-height: 50vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column; */
+	/* align-items: center; */
+	/* justify-content: space-around; */
+	position: relative;
+	height: 200px;
+	width: auto;
+	margin: 0 auto;
+}
+
+.animation img {
+	height: 200px;
+	width: auto;
+	position: absolute;
+	left: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+@keyframes cf3FadeInOut {
+	0% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 1;
+	}
+	55% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.animation img.top {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-direction: alternate;
+}
+
+.animation img.bottom {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
 .card {
 	margin: 1em;
 	padding: 1em;
