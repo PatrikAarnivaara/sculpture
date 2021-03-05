@@ -8,19 +8,32 @@ const SculptureContextProvider = (props) => {
 	const [itemsSelected, setItemsSelected] = useState([]);
 	const [listArtInstituteChicago, setlistArtInstituteChicago] = useState([]);
 	const [listFilteredSculptures, setListFilteredSculptures] = useState([]);
+	const [sortedList, setSortedList] = useState([]);
+	const [sortedListAZ, setSortedListAZ] = useState([]);
+	const [test, setTest] = useState('');
 
 	useEffect(() => {
 		function filterSelectedItems() {
-			let filteredItems = listArtInstituteChicago;
-			if (itemsSelected.length > 0) {
-				filteredItems = filteredItems.filter((filteredItem) => {
-					return itemsSelected.includes(filteredItem.category_titles[0]);
-				});
+			switch (test) {
+				case 'sortChronological':
+					setListFilteredSculptures(sortedList);
+					break;
+				case 'sortAlphabetical':
+					setListFilteredSculptures(sortedListAZ);
+					break;
+				case 'filter':
+					let filteredItems = listArtInstituteChicago;
+					filteredItems = filteredItems.filter((filteredItem) => {
+						return itemsSelected.includes(filteredItem.category_titles[0]);
+					});
+					setListFilteredSculptures(filteredItems);
+					break;
+				default:
+					setListFilteredSculptures(listArtInstituteChicago);
 			}
-			setListFilteredSculptures(filteredItems);
 		}
 		filterSelectedItems();
-	}, [itemsSelected, listArtInstituteChicago]);
+	}, [itemsSelected, listArtInstituteChicago, setListFilteredSculptures, sortedList, sortedListAZ, test]);
 
 	const getListOfSculptures = async (query) => {
 		try {
@@ -29,7 +42,6 @@ const SculptureContextProvider = (props) => {
 			);
 			if (response.status === 200) {
 				filterCategories(response.data.data);
-				/* setListCategories(response.data.data); */
 				setlistArtInstituteChicago(response.data.data);
 				setListFilteredSculptures(response.data.data);
 			}
@@ -39,6 +51,7 @@ const SculptureContextProvider = (props) => {
 	};
 
 	function selectedCategories(selected) {
+		setTest('filter');
 		setItemsSelected([...itemsSelected, selected]);
 	}
 
@@ -63,7 +76,6 @@ const SculptureContextProvider = (props) => {
 	};
 
 	function filterCategories(responseDataList) {
-		
 		/* Move to separate function and change name of variable x */
 		const x = responseDataList.map((responseData) => {
 			return responseData.category_titles[0];
@@ -97,6 +109,9 @@ const SculptureContextProvider = (props) => {
 				addSculpture,
 				removeSculpture,
 				removeCategory,
+				setSortedList,
+				setSortedListAZ,
+				setTest,
 			}}
 		>
 			{props.children}
