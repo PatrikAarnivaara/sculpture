@@ -19,9 +19,22 @@
 	color: #afafaf;
 }
 
+.container-searchbar button {
+	background-color: #FFDDD7;
+	border: none;
+	height: 6vh;
+	padding: 4px 8px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.container-searchbar button:hover {
+	background-color: #D44B02;
+	color: white;
+}
+
 @media screen and (max-width: 600px) {
 	.container-searchbar {
-		margin-top: 1em;
 		width: 100%;
 	}
 
