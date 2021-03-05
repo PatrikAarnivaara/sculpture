@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { SculptureContext } from '../../context/SculptureContext';
+import clearSearchbar from '../../assets/searchbar_cross.svg';
 import './Searchbar.css';
 
 const Searchbar = () => {
@@ -23,6 +24,9 @@ const Searchbar = () => {
 				/>
 				<input type="submit" style={{ display: 'none' }} />
 			</form>
+			<button onClick={() => setQuery('')}>
+				<img src={clearSearchbar} alt="cross" />
+			</button>
 		</div>
 	);
 };
