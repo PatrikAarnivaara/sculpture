@@ -14,7 +14,7 @@ const Sculpture = () => {
 				{listFilteredSculptures <= 0 ? (
 					<div className="animation">
 						<img className="top" src={labyrinthIcon} alt="labyrinth-icon" />
-						<img className="bottom" src={sculptureIcon} alt="sculpture-icon" />
+						{/* <img className="bottom" src={sculptureIcon} alt="sculpture-icon" /> */}
 						{/* <h5>All images are fetched from Chicago API</h5> */}
 					</div>
 				) : (
