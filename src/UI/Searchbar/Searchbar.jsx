@@ -16,7 +16,7 @@ const Searchbar = () => {
 		<div className="container-searchbar">
 			<form onSubmit={searchSculptures}>
 				<input
-					placeholder="Search"
+					placeholder="Search art..."
 					type="text"
 					name="query"
 					value={query}
