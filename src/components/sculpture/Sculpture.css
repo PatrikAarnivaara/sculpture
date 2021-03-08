@@ -1,9 +1,15 @@
+.wrapper {
+	max-width: 90%;
+	margin: 0 auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 .cards {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-evenly;
-	min-height: 100vh;
 }
 
 .card {
@@ -62,7 +68,6 @@
 
 @media only screen and (max-width: 840px) {
 	.card {
-		/* flex: 0 1 calc(50% - 1em); */
 		max-width: calc(50% - 1em);
 	}
 }
@@ -73,8 +78,11 @@
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1170px) {
+	.wrapper {
+		max-width: 1170px;
+	}
 	.card {
-		max-width: calc(20% - 1em);
+		max-width: calc(25% - 1em);
 	}
 }

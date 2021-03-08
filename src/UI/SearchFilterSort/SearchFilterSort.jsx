@@ -6,7 +6,6 @@ import Dropdown from '../../UI/Dropdown/Dropdown';
 import SortAlphabetical from '../Sort/SortAlphabetical';
 import SortChronological from '../Sort/SortChronological';
 import filterIcon from '../../assets/filter_dots.svg';
-
 import './SearchFilterSort.css';
 
 const SearchFilterSort = () => {
@@ -21,22 +20,26 @@ const SearchFilterSort = () => {
 	} = useContext(SculptureContext);
 
 	return (
-		<div className="search-filter-sort">
-			<Searchbar />
-			<div>
-				<Dropdown list={<Filter items={listCategories} />} icon={filterIcon} />
-				<SortAlphabetical
-					items={listFilteredSculptures}
-					setItemsAZ={setSortedListAZ}
-					setItemsZA={setSortedListZA}
-					test={setTest}
-				/>
-				<SortChronological
-					items={listFilteredSculptures}
-					setItems09={setSortedList09}
-					setItems90={setSortedList90}
-					test={setTest}
-				/>
+		<div>
+			<div className="search-filter-sort">
+				<div className="wrapper">
+					<Searchbar />
+					<div>
+						<Dropdown list={<Filter items={listCategories} />} icon={filterIcon} />
+						<SortAlphabetical
+							items={listFilteredSculptures}
+							setItemsAZ={setSortedListAZ}
+							setItemsZA={setSortedListZA}
+							test={setTest}
+						/>
+						<SortChronological
+							items={listFilteredSculptures}
+							setItems09={setSortedList09}
+							setItems90={setSortedList90}
+							test={setTest}
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

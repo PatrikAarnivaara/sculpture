@@ -1,5 +1,5 @@
 .dropbtn {
-	background-color: #faddd7;
+	background-color: #ffddd7;
 	padding: 8px 16px;
 	border: none;
 	cursor: pointer;
@@ -40,7 +40,7 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content li:hover {
-	background-color: #E34D4D;
+	background-color: #e34d4d;
 }
 
 /* Show the dropdown menu on hover */

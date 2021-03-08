@@ -9,17 +9,15 @@ const Sculpture = () => {
 	return (
 		/* Spinner and timer */
 		<div>
-			<div>
-				{listFilteredSculptures <= 0 ? (
-					<div className="animation">
-						<img className="top" src={labyrinthIcon} alt="labyrinth-icon" />
-					</div>
-				) : (
-					<div >
-						<SculptureList items={listFilteredSculptures} />
-					</div>
-				)}
-			</div>
+			{listFilteredSculptures <= 0 ? (
+				<div className="animation">
+					<img className="top" src={labyrinthIcon} alt="labyrinth-icon" />
+				</div>
+			) : (
+				<div className="wrapper">
+					<SculptureList items={listFilteredSculptures} />
+				</div>
+			)}
 		</div>
 	);
 };

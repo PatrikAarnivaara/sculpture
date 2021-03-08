@@ -1,10 +1,15 @@
 .search-filter-sort {
+	background-color: #ffddd7;
+	width: 100%;
+}
+
+.wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-	background-color: #faddd7;
+	max-width: 1170px;
 }
 
 @media screen and (max-width: 600px) {
