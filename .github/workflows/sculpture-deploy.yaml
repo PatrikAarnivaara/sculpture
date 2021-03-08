@@ -60,8 +60,8 @@ jobs:
           name: build
           path: .docker/build
 
-      - name: Setup gcloud CLI
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      - name: Set up gcloud Cloud SDK environment
+        uses: google-github-actions/setup-gcloud@v0.2.0
         with:
           version: '290.0.1'
           service_account_key: ${{ secrets.SCULPTURE_SA_KEY }}
