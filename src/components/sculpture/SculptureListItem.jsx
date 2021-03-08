@@ -25,7 +25,7 @@ const SculptureListItem = ({ id, url, date, description }) => {
 				<img src={url} alt={description} id={id} />
 				<div>
 					<div className="card-info">
-						<p>{description}</p>
+						<h3>{description}</h3>
 						<p>{date}</p>
 					</div>
 				</div>
