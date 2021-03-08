@@ -12,6 +12,8 @@
 	height: 40px;
 }
 
+.sort-btn:focus {outline:0;}
+
 .sort-btn:hover {
 	background-color: #FF917D;
 	color: white;

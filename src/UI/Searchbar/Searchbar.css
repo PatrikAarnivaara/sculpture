@@ -20,7 +20,7 @@
 }
 
 .container-searchbar button {
-	background-color: #FFDDD7;
+	background-color: #ffddd7;
 	border: none;
 	height: 6vh;
 	padding: 4px 8px;
@@ -28,10 +28,13 @@
 	cursor: pointer;
 }
 
-/* .container-searchbar button:hover {
-	background-color: #D44B02;
-	color: white;
-} */
+.container-searchbar:focus {
+	outline: 0;
+}
+
+.clear:focus {
+	outline: 0;
+}
 
 @media screen and (max-width: 600px) {
 	.container-searchbar {
@@ -43,6 +46,5 @@
 	.container-searchbar input {
 		height: 8vh;
 		width: 100%;
-		
 	}
 }

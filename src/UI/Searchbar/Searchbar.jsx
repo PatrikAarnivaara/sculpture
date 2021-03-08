@@ -24,7 +24,7 @@ const Searchbar = () => {
 				/>
 				<input type="submit" style={{ display: 'none' }} />
 			</form>
-			<button onClick={() => setQuery('')}>
+			<button onClick={() => setQuery('')} className="clear">
 				<img src={clearSearchbar} alt="cross" />
 			</button>
 		</div>
