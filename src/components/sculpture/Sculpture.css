@@ -1,6 +1,7 @@
 .cards {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	justify-content: space-evenly;
 	min-height: 100vh;
 }
@@ -20,9 +21,6 @@
 }
 
 .card-info {
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
 	margin: 1em;
 	font-size: 1em;
 	line-height: 2;
@@ -64,7 +62,8 @@
 
 @media only screen and (max-width: 840px) {
 	.card {
-		flex: 0 1 calc(50% - 1em);
+		/* flex: 0 1 calc(50% - 1em); */
+		max-width: calc(50% - 1em);
 	}
 }
 
