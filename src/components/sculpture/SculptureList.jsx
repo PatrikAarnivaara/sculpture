@@ -3,7 +3,7 @@ import SculptureListItem from './SculptureListItem';
 
 const SculptureList = ({ items }) => {
 	return (
-		<div className="container">
+		<div className="cards">
 			{items.length > 0
 				? items.map((item) => (
 						<SculptureListItem

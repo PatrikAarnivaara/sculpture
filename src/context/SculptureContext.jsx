@@ -34,9 +34,11 @@ const SculptureContextProvider = (props) => {
 					filteredItems = filteredItems.filter((filteredItem) => {
 						return itemsSelected.includes(filteredItem.category_titles[0]);
 					});
+					console.log(filteredItems.length)
 					if (filteredItems <= 0) {
 						setListFilteredSculptures(listArtInstituteChicago);
 					} else {
+						
 						setListFilteredSculptures(filteredItems);
 					}
 

@@ -15,7 +15,9 @@ const Sculpture = () => {
 						<img className="top" src={labyrinthIcon} alt="labyrinth-icon" />
 					</div>
 				) : (
-					<SculptureList items={listFilteredSculptures} />
+					<div >
+						<SculptureList items={listFilteredSculptures} />
+					</div>
 				)}
 			</div>
 		</div>
