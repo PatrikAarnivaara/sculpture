@@ -23,17 +23,17 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	padding: 2em 0 2em;
+	padding: 1.5em 0 0em;
 }
 
 .card-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
 	margin: 1em;
 	font-size: 1em;
-	line-height: 2;
-}
-
-.card-info span {
-	font-weight: bold;
+	line-height: 1.6;
 }
 
 .animation {
