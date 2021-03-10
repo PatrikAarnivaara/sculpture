@@ -3,7 +3,6 @@ import { SculptureContext } from '../../context/SculptureContext';
 import './Sculpture.css';
 
 const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date }) => {
-	/* TODO: Destructure: const {id, image_id, date_start, title, } = item */
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
 
@@ -39,7 +38,7 @@ const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date }) =>
 								width: '1.6em',
 								height: 'auto',
 								padding: '0',
-								opacity: '20%',
+								opacity: '25%',
 							}}
 						/>
 					</div>

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import SculptureList from '../sculpture/SculptureList';
 import { SculptureContext } from '../../context/SculptureContext';
-import cameraEyeIcon from '../../assets/camera_eye.svg';
+import Animation from "../../UI/Animation/Animation"
+import icon from '../../assets/camera_eye.svg';
 import bookmarked from '../../assets/bookmarked.svg';
 import unBookmarked from '../../assets/unbookmarked.svg';
 import './Sculpture.css';
@@ -12,9 +13,7 @@ const Sculpture = () => {
 		/* Spinner and timer */
 		<div>
 			{listFilteredSculptures <= 0 ? (
-				<div className="animation">
-					<img className="top" src={cameraEyeIcon} alt="camera eye icon" />
-				</div>
+				<Animation icon={icon}/>
 			) : (
 				<div className="wrapper">
 					<SculptureList
