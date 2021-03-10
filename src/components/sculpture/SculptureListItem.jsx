@@ -1,15 +1,14 @@
-import React /* , { useContext, useState } */ from 'react';
-/* import { SculptureContext } from '../../context/SculptureContext';
+import React, { useContext, useState } from 'react';
+import { SculptureContext } from '../../context/SculptureContext';
 import bookmarked from '../../assets/bookmarked.svg';
-import unbookmarked from '../../assets/unbookmarked.svg'; */
+import unbookmarked from '../../assets/unbookmarked.svg';
 import './Sculpture.css';
-// ADD proptypes
 
 const SculptureListItem = ({ id, url, date, description }) => {
-	/* const { addSculpture, removeSculpture } = useContext(SculptureContext);
-	const [clicked, setClicked] = useState(false); */
+	const { addSculpture, removeSculpture } = useContext(SculptureContext);
+	const [clicked, setClicked] = useState(false);
 
-	/* const handleClick = () => {
+	const handleClick = () => {
 		if (!clicked) {
 			setClicked(true);
 			addSculpture(id, url, description);
@@ -17,7 +16,7 @@ const SculptureListItem = ({ id, url, date, description }) => {
 			setClicked(false);
 			removeSculpture(id);
 		}
-	}; */
+	};
 
 	return (
 		<div className="card">
@@ -25,8 +24,18 @@ const SculptureListItem = ({ id, url, date, description }) => {
 				<img src={url} alt={description} id={id} />
 				<div>
 					<div className="card-info">
-						<h3>{description}</h3>
-						<p>{date}</p>
+						<div>
+							<h3>{description}</h3>
+							<p>{date}</p>
+						</div>
+						<div>
+							<img
+								style={{ width: '2em', height: 'auto' }}
+								src={clicked ? bookmarked : unbookmarked}
+								alt="bookmark"
+								onClick={handleClick}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
