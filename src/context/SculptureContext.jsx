@@ -12,7 +12,7 @@ const SculptureContextProvider = (props) => {
 	const [sortedList90, setSortedList90] = useState([]);
 	const [sortedListAZ, setSortedListAZ] = useState([]);
 	const [sortedListZA, setSortedListZA] = useState([]);
-	const [test, setTest] = useState('');
+	const [test, setTest] = useState(''); /* TODO: Change NAME */
 
 	useEffect(() => {
 		function filterSelectedItems() {
@@ -34,11 +34,10 @@ const SculptureContextProvider = (props) => {
 					filteredItems = filteredItems.filter((filteredItem) => {
 						return itemsSelected.includes(filteredItem.category_titles[0]);
 					});
-					console.log(filteredItems.length)
+					console.log(filteredItems.length);
 					if (filteredItems <= 0) {
 						setListFilteredSculptures(listArtInstituteChicago);
 					} else {
-						
 						setListFilteredSculptures(filteredItems);
 					}
 
@@ -88,11 +87,11 @@ const SculptureContextProvider = (props) => {
 		setItemsSelected(filteredCategories);
 	}
 
-	const addSculpture = (id, url, description) => {
+	const addSculpture = (id, image_id, date_start, title) => {
 		if (sculptures.some((sculpture) => sculpture.id === id)) {
 			return;
 		} else {
-			setSculptures([...sculptures, { id, url, description }]);
+			setSculptures([...sculptures, { id, image_id: image_id, date_start, title }]);
 		}
 	};
 
