@@ -5,8 +5,8 @@ import unbookmarked from '../../assets/unbookmarked.svg';
 import './Sculpture.css';
 
 const SculptureListItem = ({ item }) => {
-	/* const {id, image_id, date_start, title, } = item */
-	console.log(item);
+	/* TODO: Destructure: const {id, image_id, date_start, title, } = item */
+	
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
 

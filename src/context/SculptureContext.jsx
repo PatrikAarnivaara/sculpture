@@ -12,7 +12,7 @@ const SculptureContextProvider = (props) => {
 	const [sortedList90, setSortedList90] = useState([]);
 	const [sortedListAZ, setSortedListAZ] = useState([]);
 	const [sortedListZA, setSortedListZA] = useState([]);
-	const [test, setTest] = useState('');
+	const [test, setTest] = useState(''); /* TODO: Change NAME */
 
 	useEffect(() => {
 		function filterSelectedItems() {
