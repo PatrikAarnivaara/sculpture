@@ -4,14 +4,14 @@ import bookmarked from '../../assets/bookmarked.svg';
 import unbookmarked from '../../assets/unbookmarked.svg';
 import './Sculpture.css';
 
-const SculptureListItem = ({ id, url, date, description }) => {
+const SculptureListItem = ({ id, url, date, title }) => {
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
 
 	const handleClick = () => {
 		if (!clicked) {
 			setClicked(true);
-			addSculpture(id, url, description);
+			addSculpture(id, url, date, title);
 		} else {
 			setClicked(false);
 			removeSculpture(id);
@@ -21,10 +21,10 @@ const SculptureListItem = ({ id, url, date, description }) => {
 	return (
 		<div className="card">
 			<div>
-				<img src={url} alt={description} id={id} />
+				<img src={url} alt={title} id={id} />
 				<div className="card-content">
 					<div className="card-info">
-						<h4>{description}</h4>
+						<h4>{title}</h4>
 						<p>{date}</p>
 					</div>
 					<div className="card-icon">
@@ -36,7 +36,7 @@ const SculptureListItem = ({ id, url, date, description }) => {
 								width: '1.6em',
 								height: 'auto',
 								padding: '0',
-								opacity: "20%"
+								opacity: '20%',
 							}}
 						/>
 					</div>
