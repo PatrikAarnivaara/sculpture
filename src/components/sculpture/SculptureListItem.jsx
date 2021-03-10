@@ -1,18 +1,16 @@
-import React, { useContext, useState } from 'react';
-import { SculptureContext } from '../../context/SculptureContext';
+import React, { useState } from 'react';
 import './Sculpture.css';
 
-const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date }) => {
-	const { addSculpture, removeSculpture } = useContext(SculptureContext);
+const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addItems, removeItems }) => {
 	const [clicked, setClicked] = useState(false);
 
 	const handleClick = () => {
 		if (!clicked) {
 			setClicked(true);
-			addSculpture(item.id, item[image], item[date], item.title);
+			addItems(item);
 		} else {
 			setClicked(false);
-			removeSculpture(item.id);
+			removeItems(item.id);
 		}
 	};
 

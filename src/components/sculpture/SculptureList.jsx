@@ -1,7 +1,7 @@
 import React from 'react';
 import SculptureListItem from './SculptureListItem';
 
-const SculptureList = ({ items, iconUnClicked, iconClicked, image, date }) => {
+const SculptureList = ({ items, iconUnClicked, iconClicked, image, date, addItems, removeItems }) => {
 	return (
 		<div className="cards">
 			{items.length > 0
@@ -13,6 +13,8 @@ const SculptureList = ({ items, iconUnClicked, iconClicked, image, date }) => {
 							iconClicked={iconClicked}
 							image={image}
 							date={date}
+							addItems={addItems}
+							removeItems={removeItems}
 						/>
 				  ))
 				: []}
