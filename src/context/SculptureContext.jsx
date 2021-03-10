@@ -87,11 +87,12 @@ const SculptureContextProvider = (props) => {
 		setItemsSelected(filteredCategories);
 	}
 
-	const addSculpture = (id, url, date, title) => {
+	const addSculpture = (id, image_id, date_start, title) => {
+		console.log(id, image_id, date_start, title);
 		if (sculptures.some((sculpture) => sculpture.id === id)) {
 			return;
 		} else {
-			setSculptures([...sculptures, { id, url, date, title }]);
+			setSculptures([...sculptures, { id, image_id, date_start, title }]);
 		}
 	};
 

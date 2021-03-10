@@ -4,28 +4,34 @@ import bookmarked from '../../assets/bookmarked.svg';
 import unbookmarked from '../../assets/unbookmarked.svg';
 import './Sculpture.css';
 
-const SculptureListItem = ({ id, url, date, title }) => {
+const SculptureListItem = ({ item }) => {
+	/* const {id, image_id, date_start, title, } = item */
+	console.log(item);
 	const { addSculpture, removeSculpture } = useContext(SculptureContext);
 	const [clicked, setClicked] = useState(false);
 
 	const handleClick = () => {
 		if (!clicked) {
 			setClicked(true);
-			addSculpture(id, url, date, title);
+			addSculpture(item.id, item.image_id, item.date_start, item.title);
 		} else {
 			setClicked(false);
-			removeSculpture(id);
+			removeSculpture(item.id);
 		}
 	};
 
 	return (
 		<div className="card">
 			<div>
-				<img src={url} alt={title} id={id} />
+				<img
+					src={`https://www.artic.edu/iiif/2/${item.image_id}/full/843,/0/default.jpg`}
+					alt={item.title}
+					id={item.id}
+				/>
 				<div className="card-content">
 					<div className="card-info">
-						<h4>{title}</h4>
-						<p>{date}</p>
+						<h4>{item.title}</h4>
+						<p>{item.date_start}</p>
 					</div>
 					<div className="card-icon">
 						<img
