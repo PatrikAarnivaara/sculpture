@@ -30,7 +30,7 @@ const SculptureListItem = ({ id, url, date, description }) => {
 						</div>
 						<div>
 							<img
-								style={{ width: '2em', height: 'auto' }}
+								style={{ width: '2em', height: 'auto', padding: "0" }}
 								src={clicked ? bookmarked : unbookmarked}
 								alt="bookmark"
 								onClick={handleClick}
