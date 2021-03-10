@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import SculptureList from '../sculpture/SculptureList';
 import { SculptureContext } from '../../context/SculptureContext';
 import cameraEyeIcon from '../../assets/camera_eye.svg';
+import bookmarked from '../../assets/bookmarked.svg';
+import unBookmarked from '../../assets/unbookmarked.svg';
 import './Sculpture.css';
 
 const Sculpture = () => {
@@ -15,7 +17,13 @@ const Sculpture = () => {
 				</div>
 			) : (
 				<div className="wrapper">
-					<SculptureList items={listFilteredSculptures} />
+					<SculptureList
+						items={listFilteredSculptures}
+						iconUnClicked={unBookmarked}
+						iconClicked={bookmarked}
+						image="image_id"
+						date="date_start"
+					/>
 				</div>
 			)}
 		</div>
