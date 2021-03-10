@@ -26,14 +26,18 @@
 	padding: 1.5em 0 0em;
 }
 
+.card-content {
+	padding: 0.5em;
+}
+
 .card-info {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-end;
 	font-size: 1em;
-	padding: 1em;
-	line-height: 1.6;
+	line-height: 1.8;
+}
+
+.card-icon {
+	display: flex;
+	justify-content: flex-end;
 }
 
 .animation {

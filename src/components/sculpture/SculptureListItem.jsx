@@ -22,20 +22,23 @@ const SculptureListItem = ({ id, url, date, description }) => {
 		<div className="card">
 			<div>
 				<img src={url} alt={description} id={id} />
-				<div>
+				<div className="card-content">
 					<div className="card-info">
-						<div>
-							<h3>{description}</h3>
-							<p>{date}</p>
-						</div>
-						<div>
-							<img
-								style={{ width: '2em', height: 'auto', padding: "0" }}
-								src={clicked ? bookmarked : unbookmarked}
-								alt="bookmark"
-								onClick={handleClick}
-							/>
-						</div>
+						<h4>{description}</h4>
+						<p>{date}</p>
+					</div>
+					<div className="card-icon">
+						<img
+							src={clicked ? bookmarked : unbookmarked}
+							alt="bookmark"
+							onClick={handleClick}
+							style={{
+								width: '1.6em',
+								height: 'auto',
+								padding: '0',
+								opacity: "20%"
+							}}
+						/>
 					</div>
 				</div>
 			</div>
