@@ -17,7 +17,7 @@
 	flex-direction: row;
 	background-color: rgb(221, 221, 221);
 	margin: auto;
-	/* padding: 2em; */
+	padding: 2em;
 	max-width: 300px;
 	line-height: 1.4;
 }
