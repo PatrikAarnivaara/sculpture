@@ -98,8 +98,8 @@ const SculptureContextProvider = (props) => {
 		}
 	};
 
-	const removeSculpture = (id) => {
-		setSculptures(sculptures.filter((sculpture) => sculpture.id !== id));
+	const removeSculpture = (item) => {
+		setSculptures(sculptures.filter((sculpture) => sculpture.id !== item.id));
 	};
 
 	function filterCategories(responseDataList) {

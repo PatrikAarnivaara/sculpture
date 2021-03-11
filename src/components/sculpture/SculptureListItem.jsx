@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CardButton from '../../UI/Buttons/CardButton';
 import './Sculpture.css';
 
 const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addItems, removeItems }) => {
@@ -10,7 +11,7 @@ const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addI
 			addItems(item);
 		} else {
 			setClicked(false);
-			removeItems(item.id);
+			removeItems(item);
 		}
 	};
 
@@ -28,17 +29,12 @@ const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addI
 						<p>{item[date]}</p>
 					</div>
 					<div className="card-icon">
-						<img
-							src={clicked ? iconClicked : iconUnClicked}
-							alt="bookmark"
-							onClick={handleClick}
-							style={{
-								width: '1.6em',
-								height: 'auto',
-								padding: '0',
-								opacity: '25%',
-							}}
-						/>
+						<CardButton
+							clicked={clicked}
+							handleClick={handleClick}
+							iconUnClicked={iconUnClicked}
+							iconClicked={iconClicked}
+						></CardButton>
 					</div>
 				</div>
 			</div>

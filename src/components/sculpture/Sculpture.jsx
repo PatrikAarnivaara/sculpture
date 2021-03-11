@@ -9,7 +9,7 @@ import './Sculpture.css';
 
 const Sculpture = () => {
 	const { listFilteredSculptures, addSculpture, removeSculpture } = useContext(SculptureContext);
-
+	/* TODO: make add and remove item name more generic */
 	return (
 		/* Spinner and timer */
 		<div>
