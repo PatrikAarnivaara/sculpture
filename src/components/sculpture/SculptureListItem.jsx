@@ -1,41 +1,40 @@
-import React, { useContext, useState } from 'react';
-import { SculptureContext } from '../../context/SculptureContext';
-import bookmarked from '../../assets/bookmarked.svg';
-import unbookmarked from '../../assets/unbookmarked.svg';
+import React, { useState } from 'react';
+import CardButton from '../../UI/Buttons/CardButton';
 import './Sculpture.css';
 
-const SculptureListItem = ({ id, url, date, description }) => {
-	const { addSculpture, removeSculpture } = useContext(SculptureContext);
+const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addItems, removeItems }) => {
 	const [clicked, setClicked] = useState(false);
 
 	const handleClick = () => {
 		if (!clicked) {
 			setClicked(true);
-			addSculpture(id, url, description);
+			addItems(item);
 		} else {
 			setClicked(false);
-			removeSculpture(id);
+			removeItems(item);
 		}
 	};
 
 	return (
 		<div className="card">
 			<div>
-				<img src={url} alt={description} id={id} />
-				<div>
+				<img
+					src={`https://www.artic.edu/iiif/2/${item[image]}/full/843,/0/default.jpg`}
+					alt={item.title}
+					id={item.id}
+				/>
+				<div className="card-content">
 					<div className="card-info">
-						<div>
-							<h3>{description}</h3>
-							<p>{date}</p>
-						</div>
-						<div>
-							<img
-								style={{ width: '2em', height: 'auto' }}
-								src={clicked ? bookmarked : unbookmarked}
-								alt="bookmark"
-								onClick={handleClick}
-							/>
-						</div>
+						<h4>{item.title}</h4>
+						<p>{item[date]}</p>
+					</div>
+					<div className="card-icon">
+						<CardButton
+							clicked={clicked}
+							handleClick={handleClick}
+							iconUnClicked={iconUnClicked}
+							iconClicked={iconClicked}
+						></CardButton>
 					</div>
 				</div>
 			</div>

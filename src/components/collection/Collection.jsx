@@ -1,16 +1,26 @@
-import React from 'react';
-import CollectionList from './CollectionList';
-/* import CheckboxLogic from '../../UI/Checkboxes/CheckboxLogic'; */
-import './Collection.css';
+import React, { useContext } from 'react';
+import { SculptureContext } from '../../context/SculptureContext';
+import SculptureList from '../sculpture/SculptureList';
+import Animation from '../../UI/Animation/Animation';
+import icon from '../../assets/bookmark_animation.svg';
+import trashIcon from '../../assets/trash.svg';
 
 const Collection = () => {
+	const { sculptures, removeSculpture } = useContext(SculptureContext);
 	return (
 		<div>
-			{/* <div className="collection-header">
-				<h2>collection</h2>
-			</div> */}
-			{/* <CheckboxLogic /> */}
-			<CollectionList />
+			{sculptures <= 0 ? (
+				<Animation icon={icon} />
+			) : (
+				<SculptureList
+					items={sculptures}
+					iconUnClicked={trashIcon}
+					image="image_id"
+					date="date_start"
+					addItems={removeSculpture}
+					removeItems={null}
+				/>
+			)}
 		</div>
 	);
 };
