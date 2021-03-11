@@ -19,12 +19,12 @@
 	margin: auto;
 	padding: 2em;
 	max-width: 300px;
-	max-height: 300px;
+	max-height: 20vh;
 	line-height: 1.4;
 }
 
 .modal-content img {
-	width: 4em;
+	width: 60px;
 	height: auto;
 }
 
