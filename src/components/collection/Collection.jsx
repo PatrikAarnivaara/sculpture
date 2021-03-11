@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { SculptureContext } from '../../context/SculptureContext';
 import SculptureList from '../sculpture/SculptureList';
-import Animation from '../../UI/Animation/Animation';
-import icon from '../../assets/bookmark_animation.svg';
+import Modal from '../../UI/Modal/Modal';
+import icon from '../../assets/unbookmarked.svg';
 import trashIcon from '../../assets/trash.svg';
 
 const Collection = () => {
@@ -10,7 +10,7 @@ const Collection = () => {
 	return (
 		<div>
 			{sculptures <= 0 ? (
-				<Animation icon={icon} />
+				<Modal icon={icon}/>
 			) : (
 				<SculptureList
 					items={sculptures}
