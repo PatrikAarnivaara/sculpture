@@ -31,7 +31,7 @@ This article is a good source for setting up a CI/CD pipeline for your project
 https://medium.com/swlh/deploying-a-react-app-to-google-cloud-run-with-github-actions-ae24ac6cb85a
 
 ## Status
-Project is: _ongoing_ see current status at https://sculpture-304310-uzyaeprlzq-lz.a.run.app/
+Project is: _ongoing_ – see current status at https://sculpture-304310-uzyaeprlzq-lz.a.run.app/
 
 ## Contact
 Created by Patrik Aarnivaara
