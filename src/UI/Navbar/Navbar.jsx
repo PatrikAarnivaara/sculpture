@@ -2,14 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import collection from '../../assets/bookmarks.svg';
-/* import sculptureIcon from '../../assets/sculpture-webb.svg'; */
 
 const NavBar = () => {
 	return (
 		<div className="nav">
 			<nav className="nav-content">
 				<NavLink activeClassName="nav-sculpture-logo-active" exact to="/" className="nav-sculpture-logo">
-					{/* <img src={sculptureIcon} alt="sculpture-text"/> */}
 					<h3>LOGO</h3>
 				</NavLink>
 				<NavLink

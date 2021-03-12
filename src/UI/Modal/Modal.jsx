@@ -2,8 +2,9 @@ import React from 'react';
 import './Modal.css';
 
 const Modal = ({ icon }) => {
+	const modal = document.getElementById('collectionModal');
+
 	window.onclick = function (event) {
-		const modal = document.getElementById('collectionModal');
 		if (event.target === modal) {
 			modal.style.display = 'none';
 		}
@@ -13,7 +14,7 @@ const Modal = ({ icon }) => {
 		<div className="modal" id="collectionModal">
 			<div className="modal-content">
 				<span>Add images to your collection by clicking.</span>
-                <img src={icon} alt="bookmark"/>
+				<img src={icon} alt="bookmark" />
 			</div>
 		</div>
 	);
