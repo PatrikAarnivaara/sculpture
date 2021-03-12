@@ -1,5 +1,5 @@
 # Sculpture
-Search, sort and filter The Art Institute of Chicago API.
+Search, sort and filter data from The Art Institute of Chicago API.
 
 ## Technologies
 * React JS with Context
@@ -10,13 +10,13 @@ Search, sort and filter The Art Institute of Chicago API.
 * Search, sort and filter data 
 * Add and remove data to your collection
 
-## Upcoming feature
+## Improvements
 * Lists are saved in Local Storage
 * New Logo
-* CSS improvements
+* CSS
 * Filtering overlay in mobile view
 * New font
-* Improved search field
+* Search field
 * More consistent naming of components and variables as well as changed file structure
 * ...
 
