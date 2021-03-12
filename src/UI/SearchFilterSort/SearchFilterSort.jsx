@@ -1,45 +1,11 @@
-import React, { useContext } from 'react';
-import { SculptureContext } from '../../context/SculptureContext';
-import Searchbar from '../Searchbar/Searchbar';
-import Filter from '../Filter/Filter';
-import Dropdown from '../../UI/Dropdown/Dropdown';
-import SortAlphabetical from '../Sort/SortAlphabetical';
-import SortChronological from '../Sort/SortChronological';
-import filterIcon from '../../assets/filter_dots.svg';
+import React from 'react';
 import './SearchFilterSort.css';
 
-const SearchFilterSort = () => {
-	const {
-		listCategories,
-		listFilteredSculptures,
-		setSortedList09,
-		setSortedList90,
-		setSortedListAZ,
-		setSortedListZA,
-		setTest,
-	} = useContext(SculptureContext);
-
+const SearchFilterSort = ({ layout }) => {
 	return (
 		<div>
 			<div className="search-filter-sort">
-				<div className="wrapper">
-					<Searchbar />
-					<div>
-						<Dropdown list={<Filter items={listCategories} />} icon={filterIcon} />
-						<SortAlphabetical
-							items={listFilteredSculptures}
-							setItemsAZ={setSortedListAZ}
-							setItemsZA={setSortedListZA}
-							test={setTest}
-						/>
-						<SortChronological
-							items={listFilteredSculptures}
-							setItems09={setSortedList09}
-							setItems90={setSortedList90}
-							test={setTest}
-						/>
-					</div>
-				</div>
+				<div className="wrapper">{layout}</div>
 			</div>
 		</div>
 	);

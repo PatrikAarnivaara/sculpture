@@ -4,7 +4,7 @@ import Navbar from './UI/Navbar/Navbar';
 import Sculpture from './components/sculpture/Sculpture';
 import Collection from './components/collection/Collection';
 import SculptureContextProvider from './context/SculptureContext';
-import SearchFilterSort from './UI/SearchFilterSort/SearchFilterSort'
+/* import SearchFilterSort from './UI/SearchFilterSort/SearchFilterSort' */
 import './App.css';
 
 /* function saveToLocalStorage(selectedSculptures) {
@@ -18,7 +18,7 @@ function App() {
 			<SculptureContextProvider>
 				<Router>
 					<Navbar />
-					<SearchFilterSort/>
+					{/* <SearchFilterSort/> */}
 					<Switch>
 						<Route path="/" exact component={Sculpture} />
 						<Route path="/collection" exact component={Collection} />

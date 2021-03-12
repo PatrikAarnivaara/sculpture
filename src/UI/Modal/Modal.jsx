@@ -2,9 +2,8 @@ import React from 'react';
 import './Modal.css';
 
 const Modal = ({ icon }) => {
-	const modal = document.getElementById('collectionModal');
-
 	window.onclick = function (event) {
+		const modal = document.getElementById('collectionModal');
 		if (event.target === modal) {
 			modal.style.display = 'none';
 		}
