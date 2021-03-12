@@ -1,14 +1,15 @@
 .search-filter-sort {
 	background-color: #ffddd7;
+	min-height: 60px;
 	width: 100%;
 }
 
 .wrapper {
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	max-width: 1170px;
 }
 

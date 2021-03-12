@@ -32,7 +32,7 @@ const Sculpture = () => {
 		<div>
 			<SearchFilterSort
 				layout={
-					<div>
+					<React.Fragment>
 						<Searchbar />
 						<div>
 							<Dropdown list={<Filter items={listCategories} />} icon={filterIcon} />
@@ -49,7 +49,7 @@ const Sculpture = () => {
 								test={setTest}
 							/>
 						</div>
-					</div>
+					</React.Fragment>
 				}
 			/>
 			{listFilteredSculptures <= 0 ? (
