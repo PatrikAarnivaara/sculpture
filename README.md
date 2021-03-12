@@ -8,7 +8,7 @@ Search, sort and filter data from The Art Institute of Chicago API.
 
 ## Features
 * Search, sort and filter data 
-* Add and remove data to your collection
+* Add images to your collection
 
 ## Improvements
 * Lists are saved in Local Storage
