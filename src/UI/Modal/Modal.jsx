@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = ({ icon }) => {
+const Modal = ({ icon, text, alt }) => {
 	window.onclick = function (event) {
 		const modal = document.getElementById('collectionModal');
 		if (event.target === modal) {
@@ -12,8 +12,8 @@ const Modal = ({ icon }) => {
 	return (
 		<div className="modal" id="collectionModal">
 			<div className="modal-content">
-				<span>Add images to your collection by clicking.</span>
-                <img src={icon} alt="bookmark"/>
+				<span>{text}</span>
+				<img src={icon} alt={alt} />
 			</div>
 		</div>
 	);

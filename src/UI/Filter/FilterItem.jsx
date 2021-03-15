@@ -15,7 +15,6 @@ function FilterItem({ item }) {
 		}
 	};
 
-	/* Make category generic and dynamic */
 	return (
 		<li onClick={() => handleSelected(item.category)} key={item.id} className={selected ? 'selected' : null}>
 			{item.category}

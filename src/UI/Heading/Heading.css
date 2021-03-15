@@ -1,0 +1,12 @@
+.heading-wrapper {
+	padding: 1em;
+}
+
+.heading-content {
+	display: flex;
+	align-items: center;
+}
+
+.heading-content h2 {
+	color: #13879e;
+}

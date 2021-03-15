@@ -1,4 +1,4 @@
-.dropbtn {
+.dropdown-btn {
 	background-color: #ffddd7;
 	padding: 8px 16px;
 	border: none;
@@ -6,7 +6,7 @@
 	width: 100%;
 }
 
-.dropbtn img {
+.dropdown-btn img {
 	width: 40px;
 	height: 40px;
 }
@@ -36,11 +36,6 @@
 	text-decoration: none;
 	display: block;
 	cursor: pointer;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content li:hover {
-	background-color: #e34d4d;
 }
 
 /* Show the dropdown menu on hover */

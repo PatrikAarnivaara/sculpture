@@ -1,4 +1,14 @@
-.modal {
+.image-modal {
+	display: none;
+}
+
+.modal,
+.image-modal {
+	box-shadow: 0 8px 6px -6px black;
+	position: static;
+	left: 20%;
+	top: 10%;
+
 	/* display: none; */ /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -12,18 +22,33 @@
 	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
+.image-card {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+.image-card-modal {
+	display: block;
+	width: 60%;
+	height: auto;
+	/* padding: 1.5em 0 0em; */
+}
+
 .modal-content {
 	display: flex;
 	flex-direction: row;
-	background-color: rgb(221, 221, 221);
+	background-color: rgb(255, 255, 255);
 	margin: auto;
-	/* padding: 2em; */
+	padding: 2em;
 	max-width: 300px;
+	max-height: 25vh;
 	line-height: 1.4;
 }
 
 .modal-content img {
-	width: 4em;
+	width: 60px;
 	height: auto;
 }
 
