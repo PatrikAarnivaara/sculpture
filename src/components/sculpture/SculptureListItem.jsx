@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 /* import { Link } from 'react-router-dom';*/
 import CardButton from '../../UI/Buttons/CardButton';
-import ImageModal from '../../UI/Modal/ImageModal';
+import Image from '../../UI/Image/Image';
 import './Sculpture.css';
 
 const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addItems, removeItems }) => {
@@ -25,7 +25,7 @@ const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addI
 					alt={item.title}
 					id={item.id}
 				/> */}
-				<ImageModal image={item[image]} alt={item.title} id={item.id} />
+				<Image image={item[image]} alt={item.title} id={item.id} />
 				{/* <Link to={`/${item.id}`}>
 					<img
 						src={`https://www.artic.edu/iiif/2/${item[image]}/full/843,/0/default.jpg`}
