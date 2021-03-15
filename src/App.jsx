@@ -7,10 +7,6 @@ import Collection from './components/collection/Collection';
 import SculptureContextProvider from './context/SculptureContext';
 import './App.css';
 
-/* function saveToLocalStorage(selectedSculptures) {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(selectedSculptures));
- } */
-
 function App() {
 	return (
 		<div className="app">
