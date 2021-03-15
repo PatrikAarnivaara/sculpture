@@ -18,7 +18,6 @@ Search, sort and filter data from The Art Institute of Chicago API.
 * New font
 * Search field
 * More consistent naming of components and variables as well as changed file structure
-* ...
 
 ## API
 * The Art Institute of Chicago API
