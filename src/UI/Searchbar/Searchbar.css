@@ -45,11 +45,11 @@
 	}
 
 	.container-searchbar input {
-		height: 8vh;
-		width: 260px;
+		height: 7vh;
+		width: 60vw;
 	}
 
 	.container-searchbar button {
-		padding: 10px;
+		padding: 1em;
 	}
 }

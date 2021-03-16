@@ -17,5 +17,6 @@
 	.search-filter-sort {
 		flex-direction: column;
 		justify-content: space-evenly;
+
 	}
 }
