@@ -8,7 +8,7 @@ const NavBar = () => {
 		<div className="nav">
 			<nav className="nav-content">
 				<NavLink activeClassName="nav-sculpture-logo-active" exact to="/" className="nav-sculpture-logo">
-					<h3>LOGO</h3>
+					<h3>sculpture</h3>
 				</NavLink>
 				<NavLink
 					activeClassName="nav-collection-logo-active"
