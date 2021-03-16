@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import SculptureList from '../sculpture/SculptureList';
 import { SculptureContext } from '../../context/SculptureContext';
 import Animation from '../../UI/Animation/Animation';
-import icon from '../../assets/camera_eye.svg';
-import bookmarked from '../../assets/bookmarked.svg';
-import unBookmarked from '../../assets/unbookmarked.svg';
 import SearchFilterSort from '../../UI/SearchFilterSort/SearchFilterSort';
 import Filter from '../../UI/Filter/Filter';
 import Dropdown from '../../UI/Dropdown/Dropdown';
 import SortAlphabetical from '../../UI/Sort/SortAlphabetical';
 import SortChronological from '../../UI/Sort/SortChronological';
 import Searchbar from '../../UI/Searchbar/Searchbar';
+import icon from '../../assets/camera_eye.svg';
+import bookmarked from '../../assets/bookmarked.svg';
+import unBookmarked from '../../assets/unbookmarked.svg';
 import filterIcon from '../../assets/filter_dots.svg';
 import './Sculpture.css';
 
