@@ -20,10 +20,7 @@ const Modalus = ({ children, defaultOpened = false }, ref) => {
 
 	return createPortal(
 		isOpen ? (
-			<div className="modal">
-				<span role="button" className="modal-close" aria-label="close" onClick={close}>
-					x
-				</span>
+			<div className="modalus" onClick={close}>
 				{children}
 			</div>
 		) : null,
