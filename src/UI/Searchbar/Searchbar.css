@@ -5,7 +5,7 @@
 
 .container-searchbar input {
 	border: none;
-	width: 50vw;
+	width: 45vw;
 	background-color: #fafafa;
 	outline: none;
 	color: #282c34;
@@ -46,7 +46,7 @@
 
 	.container-searchbar input {
 		height: 8vh;
-		width: 90%;
+		width: 100%;
 	}
 
 	.container-searchbar button {
