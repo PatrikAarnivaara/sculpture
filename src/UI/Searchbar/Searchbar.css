@@ -46,10 +46,10 @@
 
 	.container-searchbar input {
 		height: 8vh;
-		width: 90%;
+		width: 260px;
 	}
 
 	.container-searchbar button {
-		padding: 0px;
+		padding: 10px;
 	}
 }
