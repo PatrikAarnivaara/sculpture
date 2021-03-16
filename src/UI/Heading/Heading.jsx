@@ -5,7 +5,7 @@ const Heading = () => {
 	return (
 		<div className="heading-wrapper">
 			<div className="heading-content">
-				<h2>Collection</h2>
+				<h2>collection</h2>
 			</div>
 		</div>
 	);

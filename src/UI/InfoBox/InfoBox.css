@@ -1,0 +1,16 @@
+.infobox-content {
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+	background-color: rgb(255, 255, 255);
+	margin: auto;
+	padding: 1.5em;
+	width: 250px;
+	max-height: 25vh;
+	line-height: 1.4;
+}
+
+.infobox-content img {
+	width: 60px;
+	height: auto;
+}

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Modalus from '../Modal/Modalus';
+import Modal from '../Modal/Modal';
 import noImageIcon from '../../assets/no_image_available.svg';
 import './Image.css';
 
@@ -21,7 +21,7 @@ const Image = ({ image, alt }) => {
 				alt={alt}
 				onClick={handleModal}
 			/>
-			<Modalus ref={modal}>
+			<Modal ref={modal} defaultOpened={false}>
 				{
 					<img
 						src={`https://www.artic.edu/iiif/2/${image}/full/843,/0/default.jpg`}
@@ -29,7 +29,7 @@ const Image = ({ image, alt }) => {
 						alt={alt}
 					/>
 				}
-			</Modalus>
+			</Modal>
 		</div>
 	);
 };

@@ -20,11 +20,6 @@ const SculptureListItem = ({ item, iconUnClicked, iconClicked, image, date, addI
 	return (
 		<div className="card">
 			<div>
-				{/* <img
-					src={`https://www.artic.edu/iiif/2/${item[image]}/full/843,/0/default.jpg`}
-					alt={item.title}
-					id={item.id}
-				/> */}
 				<Image image={item[image]} alt={item.title} id={item.id} />
 				{/* <Link to={`/${item.id}`}>
 					<img

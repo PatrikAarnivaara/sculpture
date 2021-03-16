@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useCallback, useImperativeHandle, useState } from 'react';
+import { createPortal } from 'react-dom';
 import './Modal.css';
 
-const Modal = ({ icon, text, alt }) => {
-	window.onclick = function (event) {
-		const modal = document.getElementById('collectionModal');
-		if (event.target === modal) {
-			modal.style.display = 'none';
-		}
-	};
+const modalElement = document.getElementById('modal-root');
 
-	return (
-		<div className="modal" id="collectionModal">
-			<div className="modal-content">
-				<span>{text}</span>
-				<img src={icon} alt={alt} />
+const Modal = ({ children, defaultOpened }, ref) => {
+	const [isOpen, setIsOpen] = useState(defaultOpened);
+
+	const close = useCallback(() => setIsOpen(false), []);
+
+	useImperativeHandle(
+		ref,
+		() => ({
+			open: () => setIsOpen(true),
+			close,
+		}),
+		[close]
+	);
+
+	return createPortal(
+		isOpen ? (
+			<div className="modalus" onClick={close}>
+				{children}
 			</div>
-		</div>
+		) : null,
+		modalElement
 	);
 };
 
-export default Modal;
+export default React.forwardRef(Modal);
