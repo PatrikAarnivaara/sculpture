@@ -4,6 +4,7 @@ import SculptureList from '../sculpture/SculptureList';
 import Modal from '../../UI/Modal/Modal';
 import Heading from '../../UI/Heading/Heading';
 import SearchFilterSort from '../../UI/SearchFilterSort/SearchFilterSort';
+import InfoBox from '../../UI/InfoBox/InfoBox';
 import icon from '../../assets/unbookmarked.svg';
 import trashIcon from '../../assets/trash.svg';
 
@@ -13,7 +14,9 @@ const Collection = () => {
 		<div>
 			<SearchFilterSort layout={<Heading />} />
 			{sculptures <= 0 ? (
-				<Modal icon={icon} text="Add images to your collection by clicking." alt="bookmark" />
+				<Modal defaultOpened={true}>
+					<InfoBox icon={icon} alt="bookmark" text="Click to add image to collection." />
+				</Modal>
 			) : (
 				<SculptureList
 					items={sculptures}
