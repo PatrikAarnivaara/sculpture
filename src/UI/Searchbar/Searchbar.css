@@ -1,12 +1,11 @@
 .container-searchbar {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 .container-searchbar input {
 	border: none;
-	width: 40vw;
+	width: 45vw;
 	background-color: #fafafa;
 	outline: none;
 	color: #282c34;
@@ -22,14 +21,17 @@
 .container-searchbar button {
 	background-color: #ffddd7;
 	border: none;
-	height: 6vh;
-	padding: 4px 8px;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	padding: 6px;
 }
 
 .container-searchbar:focus {
 	outline: 0;
+}
+
+.clear {
+	align-items: center;
 }
 
 .clear:focus {
@@ -44,6 +46,10 @@
 
 	.container-searchbar input {
 		height: 8vh;
-		width: 100%;
+		width: 90%;
+	}
+
+	.container-searchbar button {
+		padding: 0px;
 	}
 }

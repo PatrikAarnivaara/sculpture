@@ -61,7 +61,7 @@ const SculptureContextProvider = (props) => {
 	const getListOfSculptures = async (query) => {
 		try {
 			const response = await artInstituteChicago.get(
-				`artworks/search?size=10&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles,style_title,category_titles,date_start`
+				`artworks/search?size=20&q=${query}[term][is_public_domain]=true&limit=2&fields=id,title,image_id,classification_titles,style_title,category_titles,date_start`
 			);
 			if (response.status === 200) {
 				filterCategories(response.data.data);
